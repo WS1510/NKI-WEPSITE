@@ -28,3 +28,8 @@ build/
 # temporary files
 *.tmp
 *.swp
+
+# Project-specific temp/backups
+_zip_preview/
+server-backup.zip
+quote-logs.json
