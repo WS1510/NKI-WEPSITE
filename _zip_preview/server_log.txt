@@ -1,0 +1,2 @@
+Server listening on port 3000
+SMTP transporter verified with host smtp.gmail.com

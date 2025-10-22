@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "테스트사용자",
+    "company": "테스트회사",
+    "email": "tester@example.com",
+    "phone": "010-0000-0000",
+    "service": "웹사이트 제작",
+    "message": "테스트 견적 문의입니다.",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T01:45:59.106Z",
+    "sent": true,
+    "info": {
+      "messageId": "<4f5d0c0d-1256-543d-af5a-39dfe31c79d5@example.com>"
+    }
+  },
+  {
+    "id": 2,
+    "name": "테스트사용자",
+    "company": "테스트회사",
+    "email": "tester@example.com",
+    "phone": "010-0000-0000",
+    "service": "웹사이트 제작",
+    "message": "프론트 UI 테스트용 메시지입니다.",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T01:49:41.749Z",
+    "sent": true,
+    "info": {
+      "messageId": "<69058ced-0259-7d78-2a79-dce95e3e9334@example.com>"
+    }
+  },
+  {
+    "id": 3,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "dadadadaaadadsdasdadaddasdasdasd",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T01:50:24.150Z",
+    "sent": true,
+    "info": {
+      "messageId": "<85a622ca-2c55-41b5-680a-64af1de7d270@naver.com>"
+    }
+  },
+  {
+    "id": 4,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "ffggg",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T01:59:32.451Z",
+    "sent": true,
+    "info": {
+      "messageId": "<4ddac8e0-468c-b18a-aa32-0b27620c5ee0@naver.com>"
+    }
+  },
+  {
+    "id": 5,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "adljdfladlhsdkjdhs",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:01:49.424Z",
+    "sent": true,
+    "info": {
+      "messageId": "<aa5510b8-199a-42db-1704-d11d764b163f@naver.com>"
+    }
+  },
+  {
+    "id": 6,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "adlkjasdjdhjjhahj;ah;dahj;dajhk;adf",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:11:01.353Z",
+    "sent": true,
+    "info": {
+      "messageId": "<308be6e8-ccfe-f2b6-9fb4-04dd1489e776@naver.com>"
+    }
+  },
+  {
+    "id": 7,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "asdf;adshsljflkjlsjfkl;fjkl;jklf",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:14:52.009Z",
+    "sent": true,
+    "info": {
+      "messageId": "<d1fe36ba-4b2c-8a98-17c4-0e8e9eba4827@naver.com>"
+    }
+  },
+  {
+    "id": 8,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "asdadsazxzvzv",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:19:36.764Z",
+    "sent": true,
+    "info": {
+      "messageId": "<0d625095-bf89-93b5-7810-7cb8f6d551ab@naver.com>"
+    }
+  },
+  {
+    "id": 9,
+    "name": "브라우저테스트",
+    "company": "테스트회사",
+    "email": "tester@example.com",
+    "phone": "010-0000-0000",
+    "service": "웹사이트 제작",
+    "message": "브라우저 연결 테스트 메시지",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:24:25.320Z",
+    "sent": true,
+    "info": {
+      "messageId": "<ee87ad3a-cbee-0de1-8e61-c55c29a8579e@example.com>"
+    }
+  },
+  {
+    "id": 10,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "sdhdj;ah;kfjfjajfd",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:29:50.562Z",
+    "sent": true,
+    "info": {
+      "messageId": "<efda2e0d-a86d-76b5-f8c8-158ee4622efa@naver.com>"
+    }
+  },
+  {
+    "id": 11,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "이런 장비의 설계 요청드립니다\n확인하시고 답변 부탁드립니다",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:33:54.009Z",
+    "sent": true,
+    "info": {
+      "messageId": "<a5a40d09-0ef5-5f24-1635-d4f3357cd5ee@naver.com>"
+    }
+  },
+  {
+    "id": 12,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "a;kjfhdhasljadhfksjfd",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:38:02.875Z",
+    "sent": true,
+    "info": {
+      "messageId": "<1dda6fbf-2108-97c1-cbfa-bd63dcb72abd@naver.com>"
+    }
+  },
+  {
+    "id": 13,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "adkjakdf",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:39:27.118Z",
+    "sent": true,
+    "info": {
+      "messageId": "<cff86873-83af-a4f4-9ca3-211e0cc99f5e@naver.com>"
+    }
+  },
+  {
+    "id": 14,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "sadasdad",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:42:51.807Z",
+    "sent": true,
+    "info": {
+      "messageId": "<dad6195f-24e5-d4c7-0097-c1cb6fee8beb@naver.com>"
+    }
+  },
+  {
+    "id": 15,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "asdaddddasdasd",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:43:32.245Z",
+    "sent": true,
+    "info": {
+      "messageId": "<39a06895-b76d-ec26-96d2-945b4680513c@naver.com>"
+    }
+  },
+  {
+    "id": 16,
+    "name": "황보우상",
+    "company": "NK",
+    "email": "gg6532@naver.com",
+    "phone": "01025186117",
+    "service": "maintenance",
+    "message": "a;lsdfhsdfi;ofjladfd",
+    "to": "ghkdqh68@gmail.com",
+    "timestamp": "2025-10-20T02:45:08.976Z",
+    "sent": true,
+    "info": {
+      "messageId": "<4f1ea18e-19ef-602b-653a-f77c516948cd@naver.com>"
+    }
+  }
+]
