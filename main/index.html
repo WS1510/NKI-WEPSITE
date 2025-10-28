@@ -194,7 +194,7 @@
         <div class="container">
                 <h3 class="section-title">견적 문의하기</h3>
             
-            <form class="contact-form-container">
+            <form class="contact-form-container" id="quoteForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">성명 *</label>
@@ -277,5 +277,40 @@
 
     <!-- Scripts -->
     <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 기본 폼 제출 동작 방지
+            
+            // 폼 데이터 수집
+            var formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+            
+            // AJAX 요청
+            fetch('http://localhost:3000/api/quote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('성공:', data);
+                alert('견적 요청이 성공적으로 전송되었습니다.');
+                // 폼 초기화
+                document.getElementById('quoteForm').reset();
+            })
+            .catch((error) => {
+                console.error('오류:', error);
+                alert('견적 요청 전송에 실패했습니다. 나중에 다시 시도해주세요.');
+            });
+        });
+    </script>
 </body>
 </html>
