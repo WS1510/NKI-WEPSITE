@@ -33,3 +33,5 @@ build/
 _zip_preview/
 server-backup.zip
 quote-logs.json
+SMTP 패스워드.txt
+.env.example
