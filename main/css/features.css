@@ -203,13 +203,18 @@
     /* Mobile: align icon to left and text to left for better readability */
     .feature-card {
         text-align: left;
-        padding-left: 80px; /* leave room for the icon */
+        padding-left: 72px; /* leave room for the icon */
+        padding-top: 18px;
+        padding-bottom: 18px;
+        position: relative; /* ensure absolute icon positions correctly */
+        min-height: 64px;
     }
 
     .feature-icon {
         position: absolute;
         left: 16px;
-        top: 16px;
+        top: 50%;
+        transform: translateY(-50%);
         margin: 0; /* remove auto centering */
         width: 48px;
         height: 48px;
@@ -223,7 +228,7 @@
 
     .feature-icon::before { transform: none; opacity: 0.08; }
 
-    .feature-title { margin-top: 6px; }
+    .feature-title { margin: 0 0 6px 0; line-height: 1.1; }
 }
 
 @media (max-width: 480px) {
