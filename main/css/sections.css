@@ -21,43 +21,44 @@
 
 .benefit-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* vertically center icon + content */
     gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
     background-color: #f8f9fa;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
+/* Subtle hover effect */
 .benefit-item:hover {
-    transform: translateX(10px);
-    box-shadow: var(--shadow);
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 .benefit-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     flex-shrink: 0;
 }
 
 .benefit-content h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin: 0 0 6px 0;
     color: var(--text-color);
 }
 
 .benefit-content p {
     color: var(--text-light);
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -286,6 +287,7 @@
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        padding: 1rem;
     }
 }
 
