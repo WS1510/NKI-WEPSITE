@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // designated sales email for quote requests (test address)
     const SALES_EMAIL = 'gg6532@nki-1.co.kr';
     
-    // toggle header scrolled state (use class rather than inline styles to avoid FOUC)
+    // toggle header scrolled state using class (avoids inline style overrides)
     const setHeaderScrolled = () => {
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     window.addEventListener('scroll', setHeaderScrolled);
-    // ensure correct state on load (in case page is loaded with scroll)
+    // ensure correct state on load (in case page is loaded scrolled)
     window.addEventListener('load', setHeaderScrolled);
     
     // Smooth scrolling for navigation links
