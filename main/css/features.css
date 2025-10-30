@@ -199,36 +199,6 @@
     .feature-title {
         font-size: 1.3rem;
     }
-
-    /* Make the card a horizontal flex row on small screens so icon and text align vertically */
-    .feature-card {
-        display: flex;
-        align-items: center;
-        text-align: left;
-        padding: 16px;
-        gap: 14px;
-    }
-
-    .feature-icon {
-        width: 56px;
-        height: 56px;
-        font-size: 1.25rem;
-        margin: 0;
-        border-radius: 50%;
-        flex: 0 0 56px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .feature-title {
-        margin: 0 0 4px 0;
-    }
-
-    .feature-description {
-        margin: 0;
-        color: var(--text-light);
-    }
 }
 
 @media (max-width: 480px) {
