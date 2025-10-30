@@ -7,6 +7,14 @@
     overflow: hidden;
 }
 
+/* Pull hero up so its background reaches the very top of the viewport
+   while preserving internal spacing below the fixed header. This
+   counteracts the global body padding-top (80px) used for fixed header spacing. */
+.hero {
+    margin-top: -80px;
+    padding-top: 80px;
+}
+
 .hero-background {
     /* Use project image as hero background (relative to main/index.html) */
     /* 40% overlay for background image */
