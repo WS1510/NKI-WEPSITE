@@ -1,20 +1,23 @@
 /* Header Styles */
 .header {
-    background-color: transparent; /* allow hero to show through at top */
-    box-shadow: none;
+    /* Make header background opaque and fixed so underlying hero movement
+       cannot show through. This prevents visual flicker when the hero is
+       transformed for parallax. */
+    background-color: #ffffff;
+    box-shadow: var(--shadow);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: background-color 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
+    /* keep a subtle transition for shadow only */
+    transition: box-shadow 0.25s ease;
 }
 
-/* apply when user scrolls down to improve readability */
+/* Keep .scrolled present for compatibility but do not change background */
 .header.scrolled {
-    background-color: rgba(255,255,255,0.95);
+    background-color: #ffffff;
     box-shadow: var(--shadow);
-    backdrop-filter: blur(8px);
 }
 
 .header-content {
