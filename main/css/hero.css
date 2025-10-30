@@ -11,9 +11,10 @@
    while preserving internal spacing below the fixed header. This
    counteracts the global body padding-top (80px) used for fixed header spacing. */
 .hero {
-    /* match the reduced body padding so the hero background sits closer to the header */
-    margin-top: -64px;
-    padding-top: 64px;
+    /* match the reduced body padding so the hero background sits closer to the header
+       (slightly smaller than header height per request) */
+    margin-top: -56px;
+    padding-top: 56px;
 }
 
 .hero-background {

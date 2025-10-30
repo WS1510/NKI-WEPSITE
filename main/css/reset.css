@@ -13,8 +13,9 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
     color: #333;
-    /* reduce top-padding to better match header height and minimize hero gap */
-    padding-top: 64px;
+    /* reduce top-padding slightly less than header height to allow hero background show through
+       but keep content below the header. Adjusted down from 64px to 56px per UX request. */
+    padding-top: 56px;
 }
 
 a {
