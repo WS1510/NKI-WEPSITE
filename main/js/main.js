@@ -7,11 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const SALES_EMAIL = 'gg6532@nki-1.co.kr';
     
     // toggle header scrolled state using class (avoids inline style overrides)
+    // once the header becomes 'scrolled' it will remain so for the session
+    let headerScrolledOnce = false;
     const setHeaderScrolled = () => {
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
+            headerScrolledOnce = true;
         } else {
-            header.classList.remove('scrolled');
+            // only remove if user has never scrolled past threshold in this session
+            if (!headerScrolledOnce) {
+                header.classList.remove('scrolled');
+            }
         }
     };
 
