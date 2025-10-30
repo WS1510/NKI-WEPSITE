@@ -13,9 +13,9 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
     color: #333;
-    /* reduce top-padding slightly less than header height to allow hero background show through
-       but keep content below the header. Adjusted down from 64px to 56px per UX request. */
-    padding-top: 56px;
+     /* reduce top-padding to be smaller than header height so hero background peeks more
+         (user requested smaller than header). Set to 40px. */
+     padding-top: 40px;
 }
 
 a {
