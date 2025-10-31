@@ -632,7 +632,7 @@
 .company-organization {
     margin: 3rem 0;
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: var(--white);
     border-radius: 12px;
     border: 1px solid #e1e8ed;
 }
