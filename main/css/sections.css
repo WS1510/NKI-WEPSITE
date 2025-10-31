@@ -27,8 +27,8 @@
 
 .benefit-item {
     display: flex;
-    align-items: center; /* vertically center icon + content */
-    gap: 1rem;
+    align-items: flex-start; /* top align for better text layout */
+    gap: 1.2rem;
     margin-bottom: 1.5rem;
     padding: 1.5rem;
     background-color: #f8f9fa;
@@ -36,6 +36,7 @@
     transition: transform 0.22s ease, box-shadow 0.22s ease;
     width: 100%;
     max-width: 500px;
+    min-height: 80px; /* ensure consistent height */
 }
 
 /* Subtle hover effect */
@@ -55,6 +56,14 @@
     color: var(--white);
     font-size: 1.3rem;
     flex-shrink: 0;
+    margin-top: 2px; /* slight top margin to align with text */
+}
+
+.benefit-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .benefit-content h4 {
@@ -495,13 +504,16 @@
     .benefit-item {
         max-width: 100%;
         padding: 1.25rem;
-        gap: 0.8rem;
+        gap: 1rem;
+        align-items: flex-start;
+        min-height: 70px;
     }
     
     .benefit-icon {
         width: 48px;
         height: 48px;
         font-size: 1.2rem;
+        margin-top: 1px;
     }
     
     .benefit-content h4 {
