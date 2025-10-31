@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -28,33 +28,33 @@
 .benefit-item {
     display: flex;
     align-items: flex-start;
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
     background-color: #f8f9fa;
-    border-radius: 12px;
+    border-radius: 15px;
     transition: transform 0.22s ease, box-shadow 0.22s ease;
     width: 100%;
-    max-width: 500px;
-    min-height: 80px;
+    max-width: 600px;
+    min-height: 100px;
 }
 
 /* Subtle hover effect */
 .benefit-item:hover {
-    transform: translateX(6px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .benefit-icon {
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     flex-shrink: 0;
 }
 
@@ -67,18 +67,18 @@
 }
 
 .benefit-content h4 {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin: 0 0 8px 0;
+    margin: 0 0 10px 0;
     color: var(--text-color);
     line-height: 1.2;
 }
 
 .benefit-content p {
     color: var(--text-light);
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-align: left;
 }
 
@@ -505,24 +505,25 @@
     
     .benefit-item {
         max-width: 100%;
-        padding: 1.25rem;
-        gap: 1rem;
+        padding: 1.5rem;
+        gap: 1.2rem;
         align-items: flex-start;
-        min-height: 70px;
+        min-height: 90px;
+        margin-bottom: 1.5rem;
     }
     
     .benefit-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
     }
     
     .benefit-content h4 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
     
     .benefit-content p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
     
     .form-row {
