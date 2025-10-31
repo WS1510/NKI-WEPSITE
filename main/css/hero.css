@@ -20,7 +20,7 @@
 .hero-background {
     /* Use project image as hero background (relative to main/index.html) */
     /* 40% overlay for background image */
-    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%), url('/images/nki-header-bg.jpg');
+    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%), url('/main/images/nki-header-bg.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
