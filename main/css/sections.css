@@ -503,8 +503,8 @@
     }
     
     .benefit-item {
-        padding: 1.8rem 1.5rem;
-        min-height: 140px;
+        padding: 2rem 1.5rem;
+        min-height: 120px;
     }
     
     .benefit-content h4 {
@@ -512,7 +512,7 @@
     }
     
     .benefit-content p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .form-row {
@@ -681,7 +681,7 @@
 
 /* Tabs System Styles */
 .tabs-container {
-    margin-top: 6rem;
+    margin-top: 10rem;
 }
 
 .tab-buttons {
@@ -836,7 +836,7 @@
 /* Tab Content Adjustments */
 .tab-content .company-organization {
     margin: 0;
-    padding: 2rem 0;
+    padding: 4rem 0 2rem 0;
     background-color: transparent;
     border: none;
     max-width: 1000px;
@@ -844,7 +844,7 @@
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .tab-content .timeline-event:last-child {
