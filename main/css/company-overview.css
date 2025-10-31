@@ -71,6 +71,26 @@
     box-shadow: var(--shadow-hover);
 }
 
+.stat-image {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-image img {
+    transform: scale(1.05);
+}
+
 .stat-icon {
     width: 60px;
     height: 60px;
@@ -232,6 +252,10 @@
     
     .stat-item {
         padding: 1.5rem;
+    }
+    
+    .stat-image {
+        height: 100px;
     }
     
     .timeline::before {
