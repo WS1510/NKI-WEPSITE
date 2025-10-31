@@ -689,7 +689,6 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #e1e8ed;
     gap: 0;
 }
 
@@ -725,7 +724,7 @@
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
-    min-height: 600px;
+    min-height: 60px;
     padding-bottom: 3rem;
 }
 
