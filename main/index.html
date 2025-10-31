@@ -56,11 +56,25 @@
         <div class="container">
             <div class="why-choose-content">
                 <div class="why-choose-text">
-                    <h3 class="section-title">왜 NKI를 선택해야 할까요?</h3>
+                    <h3 class="section-title">회사소개</h3>
                     <p class="section-description">
                         수십 년간의 산업 자동화 경험을 바탕으로,<br>NKI는 제조 공정을 현대화하고 운영 우수성을 달성하고자 하는<br>기업들의 신뢰받는 파트너로 자리매김했습니다.
                     </p>
-                    
+                </div>
+            </div>
+            
+            <!-- Tabs System -->
+            <div class="tabs-container">
+                <!-- Tab Buttons -->
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="overview">회사개요</button>
+                    <button class="tab-btn" data-tab="organization">조직도</button>
+                    <button class="tab-btn" data-tab="history">연혁</button>
+                </div>
+                
+                <!-- Tab Contents -->
+                <!-- 회사개요 탭 -->
+                <div class="tab-content active" id="overview">
                     <div class="benefits-list">
                         <div class="benefit-item">
                             <div class="benefit-content">
@@ -83,83 +97,86 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Company Overview Content Integrated -->
-            <div class="company-overview-integrated">
-                <div class="overview-content">
-                    <div class="overview-info">
-                        <div class="company-basic-info">
-                            <div class="info-grid">
-                                <div class="info-item">
-                                    <div class="info-label">회사명</div>
-                                    <div class="info-value">NK (엔케이)</div>
+                    
+                    <!-- Company Overview Content -->
+                    <div class="company-overview-integrated">
+                        <div class="overview-content">
+                            <div class="overview-info">
+                                <div class="company-basic-info">
+                                    <div class="info-grid">
+                                        <div class="info-item">
+                                            <div class="info-label">회사명</div>
+                                            <div class="info-value">NK (엔케이)</div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="info-label">대표자</div>
+                                            <div class="info-value">김남진</div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="info-label">설립연도</div>
+                                            <div class="info-value">2010년 08월</div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="info-label">직원수</div>
+                                            <div class="info-value">6명</div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="info-label">자본금</div>
+                                            <div class="info-value">5억원</div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="info-label">소재지</div>
+                                            <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="info-item">
-                                    <div class="info-label">대표자</div>
-                                    <div class="info-value">김남진</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">설립연도</div>
-                                    <div class="info-value">2010년 08월</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">직원수</div>
-                                    <div class="info-value">6명</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">자본금</div>
-                                    <div class="info-value">5억원</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">소재지</div>
-                                    <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-stats">
-                            <div class="stat-item">
-                                <div class="stat-image">
-                                    <img src="images/company-overview.png" alt="회사전경" />
-                                </div>
-                                <div class="stat-content">
-                                    <div class="stat-number">800㎡</div>
-                                    <div class="stat-label">대지면적</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-image">
-                                    <img src="images/office-building.png" alt="사무동" />
-                                </div>
-                                <div class="stat-content">
-                                    <div class="stat-number">70㎡</div>
-                                    <div class="stat-label">사무동</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-image">
-                                    <img src="images/assembly-building.png" alt="조립동" />
-                                </div>
-                                <div class="stat-content">
-                                    <div class="stat-number">150㎡</div>
-                                    <div class="stat-label">조립동</div>
+                                
+                                <div class="company-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-image">
+                                            <img src="images/company-overview.png" alt="회사전경" />
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number">800㎡</div>
+                                            <div class="stat-label">대지면적</div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-image">
+                                            <img src="images/office-building.png" alt="사무동" />
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number">70㎡</div>
+                                            <div class="stat-label">사무동</div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-image">
+                                            <img src="images/assembly-building.png" alt="조립동" />
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number">150㎡</div>
+                                            <div class="stat-label">조립동</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Company Organization Chart -->
+                </div>
+                
+                <!-- 조직도 탭 -->
+                <div class="tab-content" id="organization">
                     <div class="company-organization">
-                        <h4 class="organization-title">조직도</h4>
                         <div class="organization-chart">
                             <img src="images/조직도.png" alt="NKI 조직도" class="organization-image" />
                         </div>
                     </div>
-                    
+                </div>
+                
+                <!-- 연혁 탭 -->
+                <div class="tab-content" id="history">
                     <div class="company-history">
-                        <h4 class="history-title">주요 연혁</h4>
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-year">2017년<br>~24년</div>

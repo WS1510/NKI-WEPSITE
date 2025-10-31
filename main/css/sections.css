@@ -674,3 +674,100 @@
         padding: 0.5rem;
     }
 }
+
+/* Tabs System Styles */
+.tabs-container {
+    margin-top: 3rem;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e1e8ed;
+    gap: 0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+    background-color: rgba(71, 135, 213, 0.05);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tab Content Adjustments */
+.tab-content .company-organization {
+    margin: 0;
+    padding: 2rem 0;
+    background-color: transparent;
+    border: none;
+}
+
+.tab-content .company-history {
+    margin: 0;
+    padding: 2rem 0;
+}
+
+.tab-content .organization-title,
+.tab-content .history-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+}
+
+/* Responsive Tabs */
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column;
+        gap: 0;
+        border-bottom: none;
+    }
+    
+    .tab-btn {
+        border-bottom: 1px solid #e1e8ed;
+        border-radius: 0;
+        padding: 1rem;
+        text-align: left;
+    }
+    
+    .tab-btn.active {
+        background-color: rgba(71, 135, 213, 0.1);
+        border-left: 4px solid var(--primary-color);
+        border-bottom: 1px solid #e1e8ed;
+    }
+    
+    .tab-content {
+        padding: 1rem 0;
+    }
+}
