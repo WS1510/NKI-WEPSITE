@@ -777,12 +777,6 @@
 
 .tab-content .timeline-table tbody tr {
     border-bottom: 1px solid #e1e8ed;
-    transition: all 0.2s ease;
-}
-
-.tab-content .timeline-table tbody tr:hover {
-    background-color: rgba(71, 135, 213, 0.05);
-    transform: scale(1.01);
 }
 
 .tab-content .timeline-table tbody tr:last-child {
@@ -895,10 +889,6 @@
         margin-bottom: 0.6rem;
         padding-left: 1.2rem;
         font-size: 0.85rem;
-    }
-    
-    .tab-content .timeline-table tbody tr:hover {
-        transform: none;
     }
 }
 }
