@@ -18,21 +18,21 @@
 .benefits-list {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .benefit-item {
     display: block;
-    padding: 2.5rem 2rem;
+    padding: 2rem 1.5rem;
     background-color: var(--white);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     width: 100%;
-    min-height: 200px;
+    min-height: 180px;
     border: 1px solid #e1e8ed;
     transition: all 0.3s ease;
     text-align: center;
@@ -61,18 +61,18 @@
 }
 
 .benefit-content h4 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin: 0 0 1.2rem 0;
+    margin: 0 0 1rem 0;
     color: var(--text-color);
     line-height: 1.3;
 }
 
 .benefit-content p {
     color: var(--text-light);
-    line-height: 1.7;
+    line-height: 1.6;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .why-choose-image {
@@ -495,20 +495,20 @@
         grid-template-columns: 1fr;
         max-width: 100%;
         padding: 0 1rem;
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
     
     .benefit-item {
-        padding: 2rem 1.5rem;
-        min-height: 160px;
+        padding: 1.8rem 1.5rem;
+        min-height: 140px;
     }
     
     .benefit-content h4 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
     
     .benefit-content p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
     
     .form-row {
@@ -587,16 +587,16 @@
     }
     
     .benefit-item {
-        padding: 1.8rem 1.2rem;
-        min-height: 140px;
+        padding: 1.5rem 1.2rem;
+        min-height: 120px;
     }
     
     .benefit-content h4 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
     
     .benefit-content p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     /* Company Overview Integrated Small Mobile Styles */
