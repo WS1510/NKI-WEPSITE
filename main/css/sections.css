@@ -6,7 +6,7 @@
 
 .why-choose-content {
     display: block;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -19,20 +19,20 @@
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.8rem;
-    max-width: 1500px;
+    gap: 2rem;
+    max-width: 20000px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .benefit-item {
     display: block;
-    padding: 2.2rem 2.5rem;
+    padding: 2rem 1rem;
     background-color: var(--white);
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     width: 100%;
-    min-height: 180px;
+    min-height: 100px;
     border: 1px solid #e1e8ed;
     transition: all 0.3s ease;
     text-align: center;
