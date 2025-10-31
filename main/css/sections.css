@@ -127,6 +127,9 @@
     margin-top: 4rem;
     padding-top: 4rem;
     border-top: 1px solid #e1e8ed;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .company-overview-integrated .overview-content {
@@ -175,7 +178,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -717,6 +720,9 @@
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .tab-content.active {
@@ -830,6 +836,8 @@
     padding: 2rem 0;
     background-color: transparent;
     border: none;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .tab-content .timeline-event:last-child {
@@ -863,8 +871,12 @@
     
 /* Mobile Table Responsive Styles */
 @media (max-width: 768px) {
+    .tab-content {
+        padding: 0 1rem;
+    }
+    
     .tab-content .timeline {
-        padding: 1rem;
+        padding: 1rem 0;
     }
     
     .tab-content .timeline-table {
