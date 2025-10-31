@@ -17,7 +17,25 @@
 
 @media (min-width: 1200px) {
     .features-grid {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+    
+    /* 첫 3개 카드는 각각 2칸씩 차지 */
+    .feature-card:nth-child(1),
+    .feature-card:nth-child(2),
+    .feature-card:nth-child(3) {
+        grid-column: span 2;
+    }
+    
+    /* 마지막 2개 카드는 중앙에 배치하고 각각 2칸씩 차지 */
+    .feature-card:nth-child(4) {
+        grid-column: 2 / 4;
+    }
+    
+    .feature-card:nth-child(5) {
+        grid-column: 4 / 6;
     }
 }
 
