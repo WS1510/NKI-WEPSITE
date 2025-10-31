@@ -52,15 +52,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Button click handlers for scrolling to contact form
+    // Button click handlers for scrolling based on data-target attribute
+    const buttonsWithTarget = document.querySelectorAll('[data-target]');
     const contactButtons = document.querySelectorAll('.btn-contact');
     const primaryButtons = document.querySelectorAll('.btn-primary:not(.submit-btn)');
+    
+    // Handle buttons with data-target attribute (priority handler)
+    buttonsWithTarget.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // If this button contains an anchor (<a>), allow the link navigation to proceed
+            if (button.querySelector('a')) return;
+
+            const targetSelector = button.getAttribute('data-target');
+            if (targetSelector) {
+                e.preventDefault(); // Prevent any default action
+                const targetSection = document.querySelector(targetSelector);
+                if (targetSection) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetSection.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
     
     contactButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             // If this button contains an anchor (<a>), allow the link navigation to proceed
             // (prevents nested-link buttons like the header login button from being intercepted)
             if (button.querySelector('a')) return;
+            // Skip if button has data-target (handled above)
+            if (button.hasAttribute('data-target')) return;
 
             const contactSection = document.querySelector('#contact');
             if (contactSection) {
@@ -79,6 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             // If this button contains an anchor (<a>), skip interception to allow normal navigation
             if (button.querySelector('a')) return;
+            // Skip if button has data-target (handled above)
+            if (button.hasAttribute('data-target')) return;
 
             const contactSection = document.querySelector('#contact');
             if (contactSection) {
