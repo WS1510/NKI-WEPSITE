@@ -130,6 +130,8 @@
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 500px;
+    padding-bottom: 2rem;
 }
 
 .company-overview-integrated .overview-content {
@@ -723,6 +725,8 @@
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
+    min-height: 600px;
+    padding-bottom: 3rem;
 }
 
 .tab-content.active {
@@ -734,7 +738,8 @@
 /* Tab Content Adjustments */
 .tab-content .company-history {
     margin: 0;
-    padding: 2rem 0;
+    padding: 2rem 0 3rem 0;
+    min-height: 500px;
 }
 
 .tab-content .organization-title,
@@ -838,6 +843,10 @@
     border: none;
     max-width: 1000px;
     margin: 0 auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .tab-content .timeline-event:last-child {
@@ -873,6 +882,8 @@
 @media (max-width: 768px) {
     .tab-content {
         padding: 0 1rem;
+        min-height: 400px;
+        padding-bottom: 2rem;
     }
     
     .tab-content .timeline {
