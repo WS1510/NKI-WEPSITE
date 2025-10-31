@@ -641,27 +641,149 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
 .organization-chart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 2rem;
+}
+
+/* Organization Box Styles */
+.org-box {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    margin: 8px;
+    min-width: 120px;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CEO Box */
+.org-ceo {
+    background-color: #3b4991;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 30px;
+    min-width: 140px;
+}
+
+/* R&D Box */
+.org-rd {
+    background-color: #8b8b8b;
+    color: white;
+    font-size: 14px;
+    padding: 12px 20px;
+    min-width: 100px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+
+.org-rd-subtitle {
+    font-size: 11px;
+    margin-top: 4px;
+    opacity: 0.9;
+}
+
+/* Department Boxes */
+.org-dept {
+    background-color: #9bc53d;
+    color: white;
+    font-weight: 500;
+}
+
+/* Partnership Boxes */
+.org-partner {
+    background-color: #9bc53d;
+    color: white;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Layout Levels */
+.org-level {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    margin: 1rem 0;
 }
 
-.organization-image {
-    max-width: 100%;
-    height: auto;
+.org-ceo-level {
+    margin-bottom: 2rem;
+}
+
+.org-dept-level {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* R&D Container */
+.org-rd-container {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    width: 120px;
+}
+
+/* Partnership Area */
+.org-partnership {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border: 2px dashed #ccc;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    max-width: 600px;
 }
 
-.organization-image:hover {
-    transform: scale(1.02);
+.org-partnership-label {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.org-partnership-boxes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Connecting Lines */
+.org-connector {
+    position: absolute;
+    background-color: #333;
+}
+
+.org-main-line {
+    width: 2px;
+    height: 60px;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.org-horizontal-line {
+    width: 300px;
+    height: 2px;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Responsive Organization Chart */
@@ -673,10 +795,50 @@
     
     .organization-title {
         font-size: 1.3rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .organization-chart {
-        padding: 0.5rem;
+        padding: 1rem;
+        min-height: 350px;
+    }
+    
+    .org-rd-container {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: auto;
+        margin: 1rem 0;
+    }
+    
+    .org-box {
+        min-width: 100px;
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+    
+    .org-ceo {
+        font-size: 15px;
+        padding: 14px 25px;
+        min-width: 120px;
+    }
+    
+    .org-dept-level {
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+    
+    .org-partnership {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    
+    .org-partnership-boxes {
+        gap: 0.5rem;
+    }
+    
+    /* Hide connecting lines on mobile for simplicity */
+    .org-connector {
+        display: none;
     }
 }
