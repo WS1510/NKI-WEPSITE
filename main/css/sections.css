@@ -681,7 +681,7 @@
 
 /* Tabs System Styles */
 .tabs-container {
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 .tab-buttons {
@@ -853,6 +853,10 @@
 
 /* Responsive Tabs */
 @media (max-width: 768px) {
+    .tabs-container {
+        margin-top: 4rem;
+    }
+    
     .tab-buttons {
         flex-direction: column;
         gap: 0;
