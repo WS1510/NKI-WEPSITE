@@ -27,7 +27,7 @@
 
 .benefit-item {
     display: block;
-    padding: 2.2rem 2rem;
+    padding: 2.2rem 2.5rem;
     background-color: var(--white);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
