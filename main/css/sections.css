@@ -700,7 +700,6 @@
     font-weight: 500;
     color: #666;
     cursor: pointer;
-    border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
     position: relative;
 }
@@ -712,7 +711,6 @@
 
 .tab-btn.active {
     color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
     font-weight: 600;
 }
 
