@@ -17,8 +17,8 @@
 
 .benefits-list {
     margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 1.5rem;
     max-width: 700px;
     margin-left: auto;
@@ -26,14 +26,17 @@
 }
 
 .benefit-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 12px;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    padding: 1.5rem !important;
+    background-color: #f8f9fa !important;
+    border-radius: 12px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    width: 100% !important;
+    min-height: 80px !important;
+    border: 1px solid #e1e8ed;
 }
 
 .benefit-item:hover {
@@ -42,34 +45,37 @@
 }
 
 .benefit-icon {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.2rem;
-    flex-shrink: 0;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: var(--primary-color) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--white) !important;
+    font-size: 1.2rem !important;
+    flex-shrink: 0 !important;
 }
 
 .benefit-content {
-    flex: 1;
+    flex: 1 !important;
+    display: block !important;
 }
 
 .benefit-content h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0 0 0.5rem 0;
-    color: var(--text-color);
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin: 0 0 0.5rem 0 !important;
+    color: var(--text-color) !important;
+    display: block !important;
 }
 
 .benefit-content p {
-    color: var(--text-light);
-    line-height: 1.6;
-    margin: 0;
-    font-size: 0.95rem;
+    color: var(--text-light) !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    font-size: 0.95rem !important;
+    display: block !important;
 }
 
 .why-choose-image {
