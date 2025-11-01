@@ -410,10 +410,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     animateOnScroll();
 
-    // Tabs functionality
+    // Tabs functionality (기존 탭 + 사이드 탭)
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
+    const sideTabButtons = document.querySelectorAll('.side-tab-btn');
+    const sideTabContents = document.querySelectorAll('.side-tab-content');
 
+    // 기존 탭 기능
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetTab = this.getAttribute('data-tab');
@@ -421,6 +424,24 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove active class from all buttons and contents
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // 사이드 탭 기능
+    sideTabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all side tab buttons and contents
+            sideTabButtons.forEach(btn => btn.classList.remove('active'));
+            sideTabContents.forEach(content => content.classList.remove('active'));
             
             // Add active class to clicked button and corresponding content
             this.classList.add('active');

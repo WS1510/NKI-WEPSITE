@@ -66,139 +66,152 @@
                 </div>
             </div>
             
-            <!-- Tabs System -->
-            <div class="tabs-container">
-                <!-- Tab Buttons -->
-                <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="overview">회사개요</button>
-                    <button class="tab-btn" data-tab="organization">조직도</button>
-                    <button class="tab-btn" data-tab="history">연혁</button>
-                </div>
-                
-                <!-- Tab Contents -->
-                <!-- 회사개요 탭 -->
-                <div class="tab-content active" id="overview">
-                    <!-- Company Overview Content -->
-                    <div class="company-overview-integrated">
-                        <div class="overview-content">
-                            <div class="overview-info">
-                                <div class="company-basic-info">
-                                    <div class="info-grid">
-                                        <div class="info-item">
-                                            <div class="info-label">회사명</div>
-                                            <div class="info-value">NK (엔케이)</div>
+            <!-- Side Tabs System -->
+            <div class="side-tabs-container">
+                <div class="side-tabs-wrapper">
+                    <!-- Side Tab Navigation -->
+                    <div class="side-tab-nav">
+                        <button class="side-tab-btn active" data-tab="overview">
+                            <i class="fas fa-building"></i>
+                            <span>회사개요</span>
+                        </button>
+                        <button class="side-tab-btn" data-tab="organization">
+                            <i class="fas fa-sitemap"></i>
+                            <span>조직도</span>
+                        </button>
+                        <button class="side-tab-btn" data-tab="history">
+                            <i class="fas fa-history"></i>
+                            <span>연혁</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Side Tab Content -->
+                    <div class="side-tab-content-wrapper">
+                        <!-- 회사개요 탭 -->
+                        <div class="side-tab-content active" id="overview">
+                            <!-- Company Overview Content -->
+                            <div class="company-overview-integrated">
+                                <div class="overview-content">
+                                    <div class="overview-info">
+                                        <div class="company-basic-info">
+                                            <div class="info-grid">
+                                                <div class="info-item">
+                                                    <div class="info-label">회사명</div>
+                                                    <div class="info-value">NK (엔케이)</div>
+                                                </div>
+                                                <div class="info-item">
+                                                    <div class="info-label">대표자</div>
+                                                    <div class="info-value">김남진</div>
+                                                </div>
+                                                <div class="info-item">
+                                                    <div class="info-label">설립연도</div>
+                                                    <div class="info-value">2010년 08월</div>
+                                                </div>
+                                                <div class="info-item">
+                                                    <div class="info-label">직원수</div>
+                                                    <div class="info-value">6명</div>
+                                                </div>
+                                                <div class="info-item">
+                                                    <div class="info-label">자본금</div>
+                                                    <div class="info-value">5억원</div>
+                                                </div>
+                                                <div class="info-item">
+                                                    <div class="info-label">소재지</div>
+                                                    <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="info-item">
-                                            <div class="info-label">대표자</div>
-                                            <div class="info-value">김남진</div>
-                                        </div>
-                                        <div class="info-item">
-                                            <div class="info-label">설립연도</div>
-                                            <div class="info-value">2010년 08월</div>
-                                        </div>
-                                        <div class="info-item">
-                                            <div class="info-label">직원수</div>
-                                            <div class="info-value">6명</div>
-                                        </div>
-                                        <div class="info-item">
-                                            <div class="info-label">자본금</div>
-                                            <div class="info-value">5억원</div>
-                                        </div>
-                                        <div class="info-item">
-                                            <div class="info-label">소재지</div>
-                                            <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="company-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-image">
-                                            <img src="images/company-overview.png" alt="회사전경" />
-                                        </div>
-                                        <div class="stat-content">
-                                            <div class="stat-number">800㎡</div>
-                                            <div class="stat-label">대지면적</div>
-                                        </div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-image">
-                                            <img src="images/office-building.png" alt="사무동" />
-                                        </div>
-                                        <div class="stat-content">
-                                            <div class="stat-number">70㎡</div>
-                                            <div class="stat-label">사무동</div>
-                                        </div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-image">
-                                            <img src="images/assembly-building.png" alt="조립동" />
-                                        </div>
-                                        <div class="stat-content">
-                                            <div class="stat-number">150㎡</div>
-                                            <div class="stat-label">조립동</div>
+                                        
+                                        <div class="company-stats">
+                                            <div class="stat-item">
+                                                <div class="stat-image">
+                                                    <img src="images/company-overview.png" alt="회사전경" />
+                                                </div>
+                                                <div class="stat-content">
+                                                    <div class="stat-number">800㎡</div>
+                                                    <div class="stat-label">대지면적</div>
+                                                </div>
+                                            </div>
+                                            <div class="stat-item">
+                                                <div class="stat-image">
+                                                    <img src="images/office-building.png" alt="사무동" />
+                                                </div>
+                                                <div class="stat-content">
+                                                    <div class="stat-number">70㎡</div>
+                                                    <div class="stat-label">사무동</div>
+                                                </div>
+                                            </div>
+                                            <div class="stat-item">
+                                                <div class="stat-image">
+                                                    <img src="images/assembly-building.png" alt="조립동" />
+                                                </div>
+                                                <div class="stat-content">
+                                                    <div class="stat-number">150㎡</div>
+                                                    <div class="stat-label">조립동</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- 조직도 탭 -->
-                <div class="tab-content" id="organization">
-                    <div class="company-organization">
-                        <div class="organization-chart">
-                            <img src="images/조직도.png" alt="NKI 조직도" class="organization-image" />
+                        
+                        <!-- 조직도 탭 -->
+                        <div class="side-tab-content" id="organization">
+                            <div class="company-organization">
+                                <div class="organization-chart">
+                                    <img src="images/조직도.png" alt="NKI 조직도" class="organization-image" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- 연혁 탭 -->
-                <div class="tab-content" id="history">
-                    <div class="company-history">
-                        <div class="timeline">
-                            <table class="timeline-table">
-                                <thead>
-                                    <tr>
-                                        <th>년도</th>
-                                        <th>주요 실적</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="year-cell">2017년<br>~2024년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">H社 태양광 CELL IN LINE ( M6 , M10 , M12)</div>
-                                            <div class="event-item">H社 태양광 CELL Spray Coater</div>
-                                            <div class="event-item">H社 Inkjet Coater</div>
-                                            <div class="event-item">S社 태양광 CELL Coater (해외 向)</div>
-                                            <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                            <div class="event-item">H社 반도체 PAD STOCKER #1-4 제작</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="year-cell">2012년<br>~2017년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">T社 3.5″~26″ OCR VACUUM LAMINATION</div>
-                                            <div class="event-item">H社 Pellicle 검사기 Loader #5-8 제작</div>
-                                            <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="year-cell">2011년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">K社 6G OVEN #2,4,5 제작</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="year-cell">2010년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">2010. 08. 15 엔케이 설립</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        
+                        <!-- 연혁 탭 -->
+                        <div class="side-tab-content" id="history">
+                            <div class="company-history">
+                                <div class="timeline">
+                                    <table class="timeline-table">
+                                        <thead>
+                                            <tr>
+                                                <th>년도</th>
+                                                <th>주요 실적</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="year-cell">2017년<br>~2024년</td>
+                                                <td class="events-cell">
+                                                    <div class="event-item">H社 태양광 CELL IN LINE ( M6 , M10 , M12)</div>
+                                                    <div class="event-item">H社 태양광 CELL Spray Coater</div>
+                                                    <div class="event-item">H社 Inkjet Coater</div>
+                                                    <div class="event-item">S社 태양광 CELL Coater (해외 向)</div>
+                                                    <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
+                                                    <div class="event-item">H社 반도체 PAD STOCKER #1-4 제작</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="year-cell">2012년<br>~2017년</td>
+                                                <td class="events-cell">
+                                                    <div class="event-item">T社 3.5″~26″ OCR VACUUM LAMINATION</div>
+                                                    <div class="event-item">H社 Pellicle 검사기 Loader #5-8 제작</div>
+                                                    <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="year-cell">2011년</td>
+                                                <td class="events-cell">
+                                                    <div class="event-item">K社 6G OVEN #2,4,5 제작</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="year-cell">2010년</td>
+                                                <td class="events-cell">
+                                                    <div class="event-item">2010. 08. 15 엔케이 설립</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

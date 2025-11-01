@@ -1,3 +1,154 @@
+/* Side Tabs System */
+.side-tabs-container {
+    margin-top: 4rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.side-tabs-wrapper {
+    display: flex;
+    min-height: 600px;
+}
+
+.side-tab-nav {
+    flex: 0 0 280px;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 2rem;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.side-tab-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: white;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.side-tab-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.side-tab-btn.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+}
+
+.side-tab-btn.active::before {
+    transform: scaleY(1);
+}
+
+.side-tab-btn i {
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+.side-tab-content-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.side-tab-content {
+    display: none;
+    padding: 3rem;
+    animation: fadeInRight 0.4s ease-out;
+}
+
+.side-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design for Side Tabs */
+@media (max-width: 1024px) {
+    .side-tabs-wrapper {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .side-tab-nav {
+        flex: none;
+        flex-direction: row;
+        padding: 1rem;
+        overflow-x: auto;
+        background: var(--primary-color);
+    }
+    
+    .side-tab-btn {
+        flex: 0 0 auto;
+        padding: 1rem 1.5rem;
+        white-space: nowrap;
+        border-radius: 8px;
+        margin-right: 0.5rem;
+    }
+    
+    .side-tab-btn::before {
+        display: none;
+    }
+    
+    .side-tab-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-tab-nav {
+        padding: 0.8rem;
+    }
+    
+    .side-tab-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .side-tab-btn i {
+        font-size: 1rem;
+    }
+    
+    .side-tab-btn span {
+        display: none;
+    }
+    
+    .side-tab-content {
+        padding: 1.5rem;
+    }
+}
+
 /* Quick Links Section */
 .quick-links {
     padding: 4rem 0;
