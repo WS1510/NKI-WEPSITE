@@ -1863,4 +1863,105 @@
         font-size: 0.85rem;
     }
 }
+
+/* Organization and Business Section Styles */
+.organization-section {
+    margin-bottom: 4rem;
+}
+
+.organization-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.organization-chart {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.organization-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.business-divisions-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Sustainability Cards */
+.sustainability-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.sustainability-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sustainability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.sustainability-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.sustainability-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.sustainability-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Organization Section */
+@media (max-width: 768px) {
+    .organization-section,
+    .business-divisions-section {
+        margin-bottom: 3rem;
+    }
+    
+    .organization-section h3,
+    .business-divisions-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .sustainability-values {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .sustainability-card {
+        padding: 2rem;
+    }
+}
 }
