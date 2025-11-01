@@ -20,13 +20,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="#" data-tab="company" aria-label="홈으로 이동"><h1>NKI</h1></a>
+                    <a href="index.html" aria-label="홈으로 이동"><h1>NKI</h1></a>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="#" data-tab="company" class="tab-nav-btn active">회사소개</a></li>
-                        <li><a href="#" data-tab="service" class="tab-nav-btn">우리의 서비스</a></li>
-                        <li><a href="#" data-tab="contact" class="tab-nav-btn">견적문의</a></li>
+                        <li><a href="company.html">회사소개</a></li>
+                        <li><a href="service.html">우리의 서비스</a></li>
+                        <li><a href="contact.html">견적문의</a></li>
                     </ul>
                 </nav>
             </div>
@@ -61,332 +61,45 @@
                         NKI(엔케이아이)는 반도체 검사기, 코팅 등 자동화 설비 설계제작으로<br>All-In-One 서비스를 제공하고 있습니다
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" data-tab="contact">견적문의</button>
-                        <button class="btn btn-secondary" data-tab="service">우리의 서비스</button>
+                        <button class="btn btn-primary" onclick="window.location.href='contact.html'">견적문의</button>
+                        <button class="btn btn-secondary" onclick="window.location.href='service.html'">우리의 서비스</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tab Content Container -->
-    <div class="main-tab-container">
-        <!-- 회사소개 탭 -->
-        <section class="main-tab-content active" id="company-tab">
-            <div class="container">
-                <div class="why-choose-content">
-                    <div class="why-choose-text">
-                        <h3 class="section-title">회사소개</h3>
-                        <p class="section-description">
-                            수십 년간의 산업 자동화 경험을 바탕으로,<br>NKI는 제조 공정을 현대화하고 운영 우수성을 달성하고자 하는<br>기업들의 신뢰받는 파트너로 자리매김했습니다.
-                        </p>
-                        
-                        <div class="benefits-list">
-                            <div class="benefit-item">
-                                <div class="benefit-content">
-                                    <h4>산업 전문성</h4>
-                                    <p>자동차, 전자, 제약, 식품 가공 산업에 특화된<br>솔루션을 제공합니다.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="benefit-item">
-                                <div class="benefit-content">
-                                    <h4>맞춤형 솔루션</h4>
-                                    <p>모든 프로젝트는<br>고객의 특정 요구사항에 맞춰 설계되어<br>최적의 성능과 투자 수익률을 보장합니다.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="benefit-item">
-                                <div class="benefit-content">
-                                    <h4>종합 서비스</h4>
-                                    <p>초기 상담부터 설치, 교육, 지속적인 지원까지ㅡ<br>모든 단계에서 함께합니다.</p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="quick-links-grid">
+                <a href="company.html" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-building"></i>
                     </div>
-                </div>
-                
-                <!-- Tabs System -->
-                <div class="tabs-container">
-                    <!-- Tab Buttons -->
-                    <div class="tab-buttons">
-                        <button class="tab-btn active" data-tab="overview">회사개요</button>
-                        <button class="tab-btn" data-tab="organization">조직도</button>
-                        <button class="tab-btn" data-tab="history">연혁</button>
+                    <h3>회사소개</h3>
+                    <p>NKI의 역사와 비전,<br>조직도와 연혁을 확인하세요</p>
+                    <span class="link-arrow">→</span>
+                </a>
+                <a href="service.html" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-cogs"></i>
                     </div>
-                    
-                    <!-- Tab Contents -->
-                    <!-- 회사개요 탭 -->
-                    <div class="tab-content active" id="overview">
-                        <!-- Company Overview Content -->
-                        <div class="company-overview-integrated">
-                            <div class="overview-content">
-                                <div class="overview-info">
-                                    <div class="company-basic-info">
-                                        <div class="info-grid">
-                                            <div class="info-item">
-                                                <div class="info-label">회사명</div>
-                                                <div class="info-value">NK (엔케이)</div>
-                                            </div>
-                                            <div class="info-item">
-                                                <div class="info-label">대표자</div>
-                                                <div class="info-value">김남진</div>
-                                            </div>
-                                            <div class="info-item">
-                                                <div class="info-label">설립연도</div>
-                                                <div class="info-value">2010년 08월</div>
-                                            </div>
-                                            <div class="info-item">
-                                                <div class="info-label">직원수</div>
-                                                <div class="info-value">6명</div>
-                                            </div>
-                                            <div class="info-item">
-                                                <div class="info-label">자본금</div>
-                                                <div class="info-value">5억원</div>
-                                            </div>
-                                            <div class="info-item">
-                                                <div class="info-label">소재지</div>
-                                                <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="company-stats">
-                                        <div class="stat-item">
-                                            <div class="stat-image">
-                                                <img src="images/company-overview.png" alt="회사전경" />
-                                            </div>
-                                            <div class="stat-content">
-                                                <div class="stat-number">800㎡</div>
-                                                <div class="stat-label">대지면적</div>
-                                            </div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div class="stat-image">
-                                                <img src="images/office-building.png" alt="사무동" />
-                                            </div>
-                                            <div class="stat-content">
-                                                <div class="stat-number">70㎡</div>
-                                                <div class="stat-label">사무동</div>
-                                            </div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div class="stat-image">
-                                                <img src="images/assembly-building.png" alt="조립동" />
-                                            </div>
-                                            <div class="stat-content">
-                                                <div class="stat-number">150㎡</div>
-                                                <div class="stat-label">조립동</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <h3>우리의 서비스</h3>
+                    <p>자동화 설비 설계부터<br>사후지원까지 완벽한 솔루션</p>
+                    <span class="link-arrow">→</span>
+                </a>
+                <a href="contact.html" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    
-                    <!-- 조직도 탭 -->
-                    <div class="tab-content" id="organization">
-                        <div class="company-organization">
-                            <div class="organization-chart">
-                                <img src="images/조직도.png" alt="NKI 조직도" class="organization-image" />
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 연혁 탭 -->
-                    <div class="tab-content" id="history">
-                        <div class="company-history">
-                            <div class="timeline">
-                                <table class="timeline-table">
-                                    <thead>
-                                        <tr>
-                                            <th>년도</th>
-                                            <th>주요 실적</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="year-cell">2017년<br>~2024년</td>
-                                            <td class="events-cell">
-                                                <div class="event-item">H社 태양광 CELL IN LINE ( M6 , M10 , M12)</div>
-                                                <div class="event-item">H社 태양광 CELL Spray Coater</div>
-                                                <div class="event-item">H社 Inkjet Coater</div>
-                                                <div class="event-item">S社 태양광 CELL Coater (해외 向)</div>
-                                                <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                                <div class="event-item">H社 반도체 PAD STOCKER #1-4 제작</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="year-cell">2012년<br>~2017년</td>
-                                            <td class="events-cell">
-                                                <div class="event-item">T社 3.5″~26″ OCR VACUUM LAMINATION</div>
-                                                <div class="event-item">H社 Pellicle 검사기 Loader #5-8 제작</div>
-                                                <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="year-cell">2011년</td>
-                                            <td class="events-cell">
-                                                <div class="event-item">K社 6G OVEN #2,4,5 제작</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="year-cell">2010년</td>
-                                            <td class="events-cell">
-                                                <div class="event-item">2010. 08. 15 엔케이 설립</div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <h3>견적문의</h3>
+                    <p>맞춤형 자동화 솔루션<br>견적을 요청하세요</p>
+                    <span class="link-arrow">→</span>
+                </a>
             </div>
-        </section>
-
-        <!-- 우리의 서비스 탭 -->
-        <section class="main-tab-content" id="service-tab">
-            <div class="container">
-                <div class="features-header">
-                    <h3 class="section-title">우리의 서비스</h3>
-                    <p class="section-description">
-                        초기 설계부터 지속적인 지원까지,<br>고객의 산업 요구사항에 맞춤화된 포괄적인 자동화 솔루션을 제공합니다.
-                    </p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon green">
-                            <i class="fas fa-drafting-compass"></i>
-                        </div>
-                        <h4 class="feature-title">설계 기술</h4>
-                        <p class="feature-description">반도체검사기, Coating, 자동화설비 설계<br>첨단기술을 바탕으로 한 전문적인 설계서비스</p>
-                        <br>
-                        <ul class="feature-list">
-                            <li>반도체 검사기 설계</li>
-                            <li>코팅 장비 설계</li>
-                            <li>자동화 설비 설계</li>
-                            <li>맞춤형 솔루션 개발</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon blue">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h4 class="feature-title">조립 & 공정</h4>
-                        <p class="feature-description">정밀 조립 및 Coating 공정기술 업력 보유<br>고품질의 공정기술을 제공</p>
-                        <br>
-                        <ul class="feature-list">
-                            <li>정밀 조립 기술</li>
-                            <li>코팅 공정 기술</li>
-                            <li>품질 관리 시스템</li>
-                            <li>공정 최적화</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon purple">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h4 class="feature-title">개조 & 개선</h4>
-                        <p class="feature-description">현장 설비에 따른 맞춤설계로<br>개조 개선 진행</p>
-                        <br>
-                        <ul class="feature-list">
-                            <li>기존 설비 분석</li>
-                            <li>맞춤형 개조 설계</li>
-                            <li>성능 개선 솔루션</li>
-                            <li>효율성 극대화</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon orange">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4 class="feature-title">특허 중심 및 국정 사업</h4>
-                        <p class="feature-description">특허 및 국정 사업 진행 중<br>혁신적인 기술 개발과 사업화</p>
-                        <br>
-                        <ul class="feature-list">
-                            <li>특허 기술 개발</li>
-                            <li>국정 사업 참여</li>
-                            <li>연구개발 프로젝트</li>
-                            <li>기술 사업화</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon red">
-                            <i class="fas fa-vial"></i>
-                        </div>
-                        <h4 class="feature-title">Test 장비 및 JIG</h4>
-                        <p class="feature-description">목적에 따른 Test 장비 및 JIG<br>맞춤 설계 제작</p>
-                        <br>
-                        <ul class="feature-list">
-                            <li>Test 장비 설계</li>
-                            <li>JIG 맞춤 제작</li>
-                            <li>검사 시스템 구축</li>
-                            <li>품질 보증 솔루션</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 견적문의 탭 -->
-        <section class="main-tab-content" id="contact-tab">
-            <div class="container">
-                <h3 class="section-title">견적 문의하기</h3>
-                
-                <form class="contact-form-container" id="quoteForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">성명 *</label>
-                            <input type="text" id="name" name="name" placeholder="성명을 입력하세요" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">회사명 *</label>
-                            <input type="text" id="company" name="company" placeholder="회사명을 입력하세요" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">이메일 주소 *</label>
-                            <input type="email" id="email" name="email" placeholder="이메일 주소를 입력하세요" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">전화번호</label>
-                            <input type="tel" id="phone" name="phone" placeholder="전화번호를 입력하세요">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">관심 서비스 *</label>
-                        <select id="service" name="service" required>
-                            <option value="">서비스를 선택하세요</option>
-                            <option value="design-tech">설계 기술</option>
-                            <option value="assembly-process">조립 & 공정</option>
-                            <option value="renovation-improvement">개조 & 개선</option>
-                            <option value="patent-government">특허 중심 및 국정 사업</option>
-                            <option value="test-equipment-jig">Test 장비 및 JIG</option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="message">프로젝트 세부사항</label>
-                        <textarea id="message" name="message" rows="5" placeholder="자동화 요구사항, 현재 과제 또는 프로젝트 요구사항에 대해 알려주세요..."></textarea>
-                        <div class="char-count">0/500 글자</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="attachments">첨부파일 (최대 3개, 각 5MB)</label>
-                        <input type="file" id="attachments" name="attachments" multiple />
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary submit-btn">견적 문의</button>
-                </form>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
+        </div>
+    </section>    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-row">

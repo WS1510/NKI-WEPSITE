@@ -1,76 +1,295 @@
-/* Main Tab Container */
-.main-tab-container {
-    position: relative;
-    min-height: calc(100vh - 120px);
-}
-
-.main-tab-content {
-    display: none;
-    min-height: calc(100vh - 120px);
-    padding: 2rem 0;
-}
-
-.main-tab-content.active {
-    display: block;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Service Tab Specific Styles */
-#service-tab {
-    background-color: var(--white);
-}
-
-#service-tab .features-grid {
-    margin-top: 3rem;
-}
-
-/* Contact Tab Specific Styles */
-#contact-tab {
-    background-color: var(--light-gray);
+/* Quick Links Section */
+.quick-links {
     padding: 4rem 0;
+    background-color: var(--light-gray);
 }
 
-/* Tab Navigation in Header */
-.tab-nav-btn {
-    position: relative;
-    cursor: pointer;
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.quick-link-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    border: none;
-    background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+}
+
+.quick-link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover::before {
+    transform: scaleX(1);
+}
+
+.quick-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quick-link-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.quick-link-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.link-arrow {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover .link-arrow {
+    transform: translateX(5px);
+}
+
+/* Individual Page Styles */
+.company-page,
+.service-page,
+.contact-page {
+    padding: 6rem 0 4rem 0;
+    min-height: calc(100vh - 120px);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Page Specific Styles */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-info-card p {
     color: var(--text-color);
     font-weight: 500;
-    font-size: 1rem;
-    padding: 0.5rem 0;
+    margin-bottom: 0.3rem;
 }
 
-.tab-nav-btn.active {
+.contact-info-card span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.contact-form-wrapper {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 4rem;
+}
+
+.contact-benefits {
+    text-align: center;
+}
+
+.contact-benefits h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-point {
+    text-align: center;
+}
+
+.benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-point h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.benefit-point p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Service Page Specific Styles */
+.service-cta {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-content h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.service-cta .btn {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    font-weight: 600;
+}
+
+.service-cta .btn:hover {
+    background: var(--light-gray);
+    transform: translateY(-2px);
+}
+
+/* Navigation Active State */
+.nav-list a.active {
     color: var(--primary-color);
     font-weight: 600;
 }
 
-.tab-nav-btn.active::after {
+.nav-list a.active::after {
     width: 100%;
 }
 
-.tab-nav-btn:hover {
-    color: var(--primary-color);
-}
-
-/* Adjust hero section height for tab layout */
-.hero {
-    height: 100vh;
-    min-height: 600px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .quick-link-card {
+        padding: 2rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 2rem;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 }
 
 /* Why Choose Section Styles */

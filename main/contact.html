@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>견적 문의 - NKI</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="홈으로 이동"><h1>NKI</h1></a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="company.html">회사소개</a></li>
+                        <li><a href="service.html">우리의 서비스</a></li>
+                        <li><a href="contact.html" class="active">견적문의</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Page -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="page-header">
+                <h2 class="page-title">견적 문의하기</h2>
+                <p class="page-description">
+                    자동화 솔루션에 대한 문의사항이나 견적 요청을 보내주시면<br>전문가가 신속하게 답변드리겠습니다.
+                </p>
+            </div>
+            
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>전화 문의</h4>
+                    <p>041) 583-8598</p>
+                    <span>평일 09:00 - 18:00</span>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-fax"></i>
+                    </div>
+                    <h4>팩스</h4>
+                    <p>041) 583-8599</p>
+                    <span>24시간 접수</span>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>이메일</h4>
+                    <p>njkim2010@nki-1.co.kr</p>
+                    <span>24시간 접수</span>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>오시는 길</h4>
+                    <p>충남 천안시 서북구<br>직산읍 신갈리 125-11</p>
+                    <span>NKI(엔케이아이)</span>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form-container" id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">성명 *</label>
+                            <input type="text" id="name" name="name" placeholder="성명을 입력하세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">회사명 *</label>
+                            <input type="text" id="company" name="company" placeholder="회사명을 입력하세요" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">이메일 주소 *</label>
+                            <input type="email" id="email" name="email" placeholder="이메일 주소를 입력하세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">전화번호</label>
+                            <input type="tel" id="phone" name="phone" placeholder="전화번호를 입력하세요">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">관심 서비스 *</label>
+                        <select id="service" name="service" required>
+                            <option value="">서비스를 선택하세요</option>
+                            <option value="design-tech">설계 기술</option>
+                            <option value="assembly-process">조립 & 공정</option>
+                            <option value="renovation-improvement">개조 & 개선</option>
+                            <option value="patent-government">특허 중심 및 국정 사업</option>
+                            <option value="test-equipment-jig">Test 장비 및 JIG</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="message">프로젝트 세부사항</label>
+                        <textarea id="message" name="message" rows="5" placeholder="자동화 요구사항, 현재 과제 또는 프로젝트 요구사항에 대해 알려주세요..."></textarea>
+                        <div class="char-count">0/500 글자</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachments">첨부파일 (최대 3개, 각 5MB)</label>
+                        <input type="file" id="attachments" name="attachments" multiple />
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn">견적 문의</button>
+                </form>
+            </div>
+
+            <!-- Why Choose Us for Contact -->
+            <div class="contact-benefits">
+                <h3>왜 NKI를 선택해야 할까요?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-point">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>신속한 대응</h4>
+                        <p>24시간 이내 전문가 상담</p>
+                    </div>
+                    <div class="benefit-point">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>전문성</h4>
+                        <p>10년 이상의 산업 자동화 경험</p>
+                    </div>
+                    <div class="benefit-point">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>맞춤 솔루션</h4>
+                        <p>고객별 최적화된 제안</p>
+                    </div>
+                    <div class="benefit-point">
+                        <div class="benefit-icon">
+                            <i class="fas fa-support"></i>
+                        </div>
+                        <h4>지속 지원</h4>
+                        <p>사후관리까지 완벽 지원</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-center">
+                    <div class="footer-center-inner">
+                        <h2 class="footer-company">NKI(엔케이아이)</h2>
+                        <div class="footer-company-lines">
+                            <p>COMPANY : NKI(엔케이아이), OWNER : 김 남 진, TEL : 041) 583-8598, FAX : 041) 583-8599, E-mail : njkim2010@nki-1.co.kr, ADDRESS : [31029] 충청남도 천안시 서북구 직산읍 신갈리 125-11, (NKI(엔케이아이))</p>
+                            <p>BUSINESS LICENSE : 490-81-02724, 개인정보관리책임자 : 김남진 (@nki-1.co.kr)</p>
+                        </div>
+                            <div class="footer-note">
+                                <p>COPYRIGHT (c) COMPANY NATIONAL KOREA INDUSTRY Co.,Ltd. , ALL RIGHTS RESERVED.</p>
+                                <p class="footer-small">본 사이트에 사용된 모든 이미지와 내용의 무단도용을 금지 합니다. Design by Company NKI</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-icon">
+            <i class="fas fa-comment"></i>
+        </div>
+        <span class="chat-text">Talk with Us</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 기본 폼 제출 동작 방지
+            
+            // 폼 데이터 수집
+            var formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+            
+            // AJAX 요청
+            fetch('/api/quote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('성공:', data);
+                alert('견적 요청이 성공적으로 전송되었습니다.');
+                // 폼 초기화
+                document.getElementById('quoteForm').reset();
+            })
+            .catch((error) => {
+                console.error('오류:', error);
+                alert('견적 요청 전송에 실패했습니다. 나중에 다시 시도해주세요.');
+            });
+        });
+    </script>
+</body>
+</html>
