@@ -1910,10 +1910,30 @@
     text-align: center;
 }
 
+.team-overview {
+    margin-bottom: 3rem;
+}
+
+.team-summary {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+.team-summary p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+}
+
 .team-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .team-card {
@@ -1929,6 +1949,14 @@
 .team-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.ceo-card {
+    border-left: 4px solid #e74c3c;
+}
+
+.ceo-card .team-icon {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
 }
 
 .team-icon {
@@ -1947,14 +1975,92 @@
 .team-card h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     color: var(--text-color);
+}
+
+.team-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(71, 135, 213, 0.1);
+    border-radius: 15px;
+    display: inline-block;
 }
 
 .team-card p {
     color: #666;
     line-height: 1.5;
     font-size: 0.9rem;
+}
+
+/* Work Process Styles */
+.work-process {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.work-process h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.process-step {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 180px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    max-width: 200px;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.step-content h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.step-content p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.process-arrow {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* Sustainability Cards */
@@ -2142,6 +2248,33 @@
     
     .responsibility-item {
         padding: 1.5rem;
+    }
+    
+    .team-summary {
+        padding: 1.2rem 1.5rem;
+    }
+    
+    .team-summary p {
+        font-size: 1rem;
+    }
+    
+    .work-process {
+        padding: 1.5rem;
+    }
+    
+    .process-flow {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .process-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+    
+    .process-step {
+        max-width: 100%;
+        min-width: 200px;
     }
 }
 }
