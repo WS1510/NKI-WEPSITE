@@ -1,3 +1,78 @@
+/* Main Tab Container */
+.main-tab-container {
+    position: relative;
+    min-height: calc(100vh - 120px);
+}
+
+.main-tab-content {
+    display: none;
+    min-height: calc(100vh - 120px);
+    padding: 2rem 0;
+}
+
+.main-tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Service Tab Specific Styles */
+#service-tab {
+    background-color: var(--white);
+}
+
+#service-tab .features-grid {
+    margin-top: 3rem;
+}
+
+/* Contact Tab Specific Styles */
+#contact-tab {
+    background-color: var(--light-gray);
+    padding: 4rem 0;
+}
+
+/* Tab Navigation in Header */
+.tab-nav-btn {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.tab-nav-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-nav-btn.active::after {
+    width: 100%;
+}
+
+.tab-nav-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Adjust hero section height for tab layout */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+}
+
 /* Why Choose Section Styles */
 .why-choose {
     padding: 5rem 0;

@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // ensure correct state on load (in case page is loaded scrolled)
     window.addEventListener('load', setHeaderScrolled);
     
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-list a');
+    // Smooth scrolling for navigation links (탭 기반 네비게이션 제거)
+    const navLinks = document.querySelectorAll('.nav-list a:not(.tab-nav-btn)');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -51,70 +51,72 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Button click handlers for scrolling based on data-target attribute
-    const buttonsWithTarget = document.querySelectorAll('[data-target]');
-    const contactButtons = document.querySelectorAll('.btn-contact');
-    const primaryButtons = document.querySelectorAll('.btn-primary:not(.submit-btn)');
-    
-    // Handle buttons with data-target attribute (priority handler)
-    buttonsWithTarget.forEach(button => {
-        button.addEventListener('click', function(e) {
-            // If this button contains an anchor (<a>), allow the link navigation to proceed
-            if (button.querySelector('a')) return;
 
-            const targetSelector = button.getAttribute('data-target');
-            if (targetSelector) {
-                e.preventDefault(); // Prevent any default action
-                const targetSection = document.querySelector(targetSelector);
-                if (targetSection) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = targetSection.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+    // Main Tab Navigation
+    const tabNavButtons = document.querySelectorAll('.tab-nav-btn');
+    const mainTabContents = document.querySelectorAll('.main-tab-content');
+
+    tabNavButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabNavButtons.forEach(btn => btn.classList.remove('active'));
+            mainTabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            const targetContent = document.querySelector(`#${targetTab}-tab`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+            
+            // Scroll to top of tab content
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Button click handlers for main tab navigation
+    const buttonsWithTab = document.querySelectorAll('[data-tab]');
+    
+    // Handle buttons with data-tab attribute for main tab navigation
+    buttonsWithTab.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Skip if this is a tab navigation button in header (handled above)
+            if (button.classList.contains('tab-nav-btn')) return;
+            // Skip if this is a sub-tab button (handled separately)
+            if (button.classList.contains('tab-btn')) return;
+
+            const targetTab = button.getAttribute('data-tab');
+            if (targetTab) {
+                e.preventDefault();
+                
+                // Switch to the main tab
+                const tabNavButtons = document.querySelectorAll('.tab-nav-btn');
+                const mainTabContents = document.querySelectorAll('.main-tab-content');
+                
+                // Remove active class from all buttons and contents
+                tabNavButtons.forEach(btn => btn.classList.remove('active'));
+                mainTabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to target tab
+                const targetNavBtn = document.querySelector(`.tab-nav-btn[data-tab="${targetTab}"]`);
+                if (targetNavBtn) {
+                    targetNavBtn.classList.add('active');
                 }
-            }
-        });
-    });
-    
-    contactButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            // If this button contains an anchor (<a>), allow the link navigation to proceed
-            // (prevents nested-link buttons like the header login button from being intercepted)
-            if (button.querySelector('a')) return;
-            // Skip if button has data-target (handled above)
-            if (button.hasAttribute('data-target')) return;
-
-            const contactSection = document.querySelector('#contact');
-            if (contactSection) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = contactSection.offsetTop - headerHeight;
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    primaryButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // If this button contains an anchor (<a>), skip interception to allow normal navigation
-            if (button.querySelector('a')) return;
-            // Skip if button has data-target (handled above)
-            if (button.hasAttribute('data-target')) return;
-
-            const contactSection = document.querySelector('#contact');
-            if (contactSection) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = contactSection.offsetTop - headerHeight;
+                const targetContent = document.querySelector(`#${targetTab}-tab`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
                 
+                // Scroll to top
                 window.scrollTo({
-                    top: targetPosition,
+                    top: 0,
                     behavior: 'smooth'
                 });
             }
@@ -390,6 +392,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', animateOnScroll);
     
+    // Initialize default tab (회사소개)
+    document.addEventListener('DOMContentLoaded', function() {
+        const defaultTab = document.querySelector('.tab-nav-btn[data-tab="company"]');
+        const defaultContent = document.querySelector('#company-tab');
+        
+        if (defaultTab && defaultContent) {
+            // Ensure company tab is active by default
+            document.querySelectorAll('.tab-nav-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.main-tab-content').forEach(content => content.classList.remove('active'));
+            
+            defaultTab.classList.add('active');
+            defaultContent.classList.add('active');
+        }
+    });
+
     // Initialize
     animateOnScroll();
 
