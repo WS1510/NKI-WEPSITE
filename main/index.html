@@ -43,24 +43,6 @@
                         NKI(엔케이아이)는 반도체 검사기, 코팅 등 자동화 설비 설계제작으로<br>All-In-One 서비스를 제공하고 있습니다
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" data-target="#contact">견적문의</button>
-                        <button class="btn btn-secondary" data-target="#service">우리의 서비스</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="hero-title">산업 자동화의 미래를 선도합니다</h2>
-                    <p class="hero-description">
-                        NKI(엔케이아이)는 반도체 검사기, 코팅 등 자동화 설비 설계제작으로<br>All-In-One 서비스를 제공하고 있습니다
-                    </p>
-                    <div class="hero-buttons">
                         <button class="btn btn-primary" onclick="window.location.href='contact.html'">견적문의</button>
                         <button class="btn btn-secondary" onclick="window.location.href='service.html'">우리의 서비스</button>
                     </div>
@@ -130,40 +112,5 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script>
-        document.getElementById('quoteForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // 기본 폼 제출 동작 방지
-            
-            // 폼 데이터 수집
-            var formData = {
-                name: document.getElementById('name').value,
-                company: document.getElementById('company').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-            
-            // AJAX 요청
-            fetch('/api/quote', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('성공:', data);
-                alert('견적 요청이 성공적으로 전송되었습니다.');
-                // 폼 초기화
-                document.getElementById('quoteForm').reset();
-            })
-            .catch((error) => {
-                console.error('오류:', error);
-                alert('견적 요청 전송에 실패했습니다. 나중에 다시 시도해주세요.');
-            });
-        });
-    </script>
 </body>
 </html>
