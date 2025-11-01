@@ -179,10 +179,12 @@ body {
     padding: var(--spacing-2xl) 0;
 }
 
-.section-container {
+.section-container,
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+    width: 100%;
 }
 
 /* Typography Override */

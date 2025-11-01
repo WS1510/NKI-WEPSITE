@@ -1,15 +1,20 @@
 /* Home Page Specific Styles - 홈페이지 전용 스타일 */
 
-/* Hero Section */
+/* Hero Section - Main Homepage Hero */
+.hero,
 .home-hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
-    padding: 100px 0;
+    padding: 120px 0 80px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
 }
 
+.hero::before,
 .home-hero::before {
     content: '';
     position: absolute;
@@ -21,38 +26,186 @@
     opacity: 0.1;
 }
 
+/* Hero Background */
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Hero Content */
+.hero-content,
 .home-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+    width: 100%;
 }
 
+/* Hero Typography */
+.hero-title,
 .home-hero-title {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-bold);
     line-height: var(--line-height-tight);
     margin-bottom: var(--spacing-lg);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: var(--white);
 }
 
+.hero-description,
+.hero-subtitle,
 .home-hero-subtitle {
     font-size: var(--font-size-xl);
     font-weight: var(--font-normal);
-    opacity: 0.9;
+    opacity: 0.95;
     margin-bottom: var(--spacing-2xl);
     line-height: var(--line-height-relaxed);
+    color: var(--white);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--spacing-2xl);
 }
 
+/* Hero Buttons */
+.hero-buttons,
 .home-hero-buttons {
     display: flex;
     justify-content: center;
     gap: var(--spacing-lg);
     flex-wrap: wrap;
+    margin-top: var(--spacing-xl);
 }
 
-/* Quick Links Section */
+.hero-buttons .btn {
+    padding: 16px 32px;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-semibold);
+    border-radius: var(--radius);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    min-width: 160px;
+    justify-content: center;
+}
+
+.hero-buttons .btn-primary {
+    background: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--white);
+}
+
+.hero-buttons .btn-primary:hover {
+    background: transparent;
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hero-buttons .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Quick Links Section - Legacy Support */
+.quick-links {
+    padding: var(--spacing-2xl) 0;
+    background: var(--gray-50);
+}
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.quick-link-card {
+    background: var(--white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    display: block;
+    border: 2px solid transparent;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.quick-link-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.quick-link-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.quick-link-card p {
+    color: var(--text-muted);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-lg);
+}
+
+.link-arrow {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+    transition: all var(--transition-base);
+}
+
+.quick-link-card:hover .link-arrow {
+    transform: translateX(4px);
+    color: var(--secondary-color);
+}
+
+/* Mobile responsive for Quick Links */
+@media (max-width: 768px) {
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .quick-link-card {
+        padding: var(--spacing-xl);
+    }
+}
 .home-quick-links {
     padding: var(--spacing-2xl) 0;
     background: var(--gray-50);
@@ -370,22 +523,45 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .hero,
     .home-hero {
-        padding: 60px 0;
+        padding: 80px 0 60px;
+        min-height: 60vh;
     }
     
+    .hero-title,
     .home-hero-title {
         font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-md);
     }
     
+    .hero-description,
+    .hero-subtitle,
     .home-hero-subtitle {
         font-size: var(--font-size-base);
         margin-bottom: var(--spacing-lg);
     }
     
+    .hero-buttons,
     .home-hero-buttons {
         flex-direction: column;
         gap: var(--spacing-sm);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .quick-link-card {
+        padding: var(--spacing-xl);
     }
     
     .home-quick-links-grid,
@@ -408,8 +584,30 @@
 }
 
 @media (max-width: 480px) {
+    .hero,
+    .home-hero {
+        padding: 60px 0 40px;
+        min-height: 50vh;
+    }
+    
+    .hero-content,
     .home-hero-content {
         padding: 0 var(--spacing-md);
+    }
+    
+    .hero-title,
+    .home-hero-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-description,
+    .hero-subtitle,
+    .home-hero-subtitle {
+        font-size: var(--font-size-sm);
+    }
+    
+    .quick-link-card {
+        padding: var(--spacing-lg);
     }
     
     .home-stats-grid {
