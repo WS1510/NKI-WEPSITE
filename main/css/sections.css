@@ -1897,6 +1897,66 @@
     text-align: center;
 }
 
+/* Team Composition Styles */
+.team-composition {
+    margin-top: 4rem;
+}
+
+.team-composition h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.team-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.team-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.team-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.team-card p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
 /* Sustainability Cards */
 .sustainability-values {
     display: grid;
@@ -1946,12 +2006,14 @@
 /* Responsive Design for Organization Section */
 @media (max-width: 768px) {
     .organization-section,
-    .business-divisions-section {
+    .business-divisions-section,
+    .team-composition {
         margin-bottom: 3rem;
     }
     
     .organization-section h3,
-    .business-divisions-section h3 {
+    .business-divisions-section h3,
+    .team-composition h3 {
         font-size: 1.5rem;
     }
     
@@ -1962,6 +2024,21 @@
     
     .sustainability-card {
         padding: 2rem;
+    }
+    
+    .team-info {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+    
+    .team-card {
+        padding: 1.5rem;
+    }
+    
+    .team-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
     }
 }
 }
