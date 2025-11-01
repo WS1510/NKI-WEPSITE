@@ -410,11 +410,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     animateOnScroll();
 
-    // Tabs functionality (기존 탭 + 사이드 탭)
+    // Tabs functionality (기존 탭 + 사이드 탭 + 회사 네비게이션 탭)
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     const sideTabButtons = document.querySelectorAll('.side-tab-btn');
     const sideTabContents = document.querySelectorAll('.side-tab-content');
+    const companyNavButtons = document.querySelectorAll('.company-nav-btn');
+    const companyTabContents = document.querySelectorAll('.company-tab-content');
 
     // 기존 탭 기능
     tabButtons.forEach(button => {
@@ -442,6 +444,24 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove active class from all side tab buttons and contents
             sideTabButtons.forEach(btn => btn.classList.remove('active'));
             sideTabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // 회사 네비게이션 탭 기능
+    companyNavButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all company nav buttons and contents
+            companyNavButtons.forEach(btn => btn.classList.remove('active'));
+            companyTabContents.forEach(content => content.classList.remove('active'));
             
             // Add active class to clicked button and corresponding content
             this.classList.add('active');

@@ -35,182 +35,296 @@
 
     <!-- Company Introduction Section -->
     <section class="company-page">
-        <div class="container">
-            <div class="page-header">
-                <h2 class="page-title">회사소개</h2>
-                <p class="page-description">
-                    수십 년간의 산업 자동화 경험을 바탕으로,<br>NKI는 제조 공정을 현대화하고 운영 우수성을 달성하고자 하는<br>기업들의 신뢰받는 파트너로 자리매김했습니다.
-                </p>
+        <!-- Hero Section with Background Image -->
+        <div class="company-hero">
+            <div class="company-hero-background">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="company-hero-content">
+                        <div class="hero-subtitle">Corporate Information</div>
+                        <h1 class="hero-main-title">기업정보</h1>
+                        <div class="hero-divider"></div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="benefits-list">
-                <div class="benefit-item">
-                    <div class="benefit-content">
-                        <h4>산업 전문성</h4>
-                        <p>자동차, 전자, 제약, 식품 가공 산업에 특화된<br>솔루션을 제공합니다.</p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-content">
-                        <h4>맞춤형 솔루션</h4>
-                        <p>모든 프로젝트는<br>고객의 특정 요구사항에 맞춰 설계되어<br>최적의 성능과 투자 수익률을 보장합니다.</p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-content">
-                        <h4>종합 서비스</h4>
-                        <p>초기 상담부터 설치, 교육, 지속적인 지원까지ㅡ<br>모든 단계에서 함께합니다.</p>
-                    </div>
+        <!-- Navigation Tabs -->
+        <div class="company-nav-section">
+            <div class="container">
+                <div class="company-nav-tabs">
+                    <button class="company-nav-btn active" data-tab="overview">
+                        <span>회사 개요</span>
+                    </button>
+                    <button class="company-nav-btn" data-tab="ceo-message">
+                        <span>CEO Message</span>
+                    </button>
+                    <button class="company-nav-btn" data-tab="business">
+                        <span>사업부 소개</span>
+                    </button>
+                    <button class="company-nav-btn" data-tab="organization">
+                        <span>지속가능경영</span>
+                    </button>
+                    <button class="company-nav-btn" data-tab="history">
+                        <span>연혁</span>
+                    </button>
+                    <button class="company-nav-btn" data-tab="family">
+                        <span>NKI Family</span>
+                    </button>
                 </div>
             </div>
-            
-            <!-- Side Tabs System -->
-            <div class="side-tabs-container">
-                <div class="side-tabs-wrapper">
-                    <!-- Side Tab Navigation -->
-                    <div class="side-tab-nav">
-                        <button class="side-tab-btn active" data-tab="overview">
-                            <i class="fas fa-building"></i>
-                            <span>회사개요</span>
-                        </button>
-                        <button class="side-tab-btn" data-tab="organization">
-                            <i class="fas fa-sitemap"></i>
-                            <span>조직도</span>
-                        </button>
-                        <button class="side-tab-btn" data-tab="history">
-                            <i class="fas fa-history"></i>
-                            <span>연혁</span>
-                        </button>
+        </div>
+
+        <!-- Tab Content Area -->
+        <div class="company-content-area">
+            <div class="container">
+                <!-- 회사개요 탭 -->
+                <div class="company-tab-content active" id="overview">
+                    <div class="content-header">
+                        <h2>회사개요</h2>
+                        <p class="content-subtitle">수십 년간의 산업 자동화 경험을 바탕으로, NKI는 제조 공정을 현대화하고 운영 우수성을 달성하고자 하는 기업들의 신뢰받는 파트너로 자리매김했습니다.</p>
                     </div>
-                    
-                    <!-- Side Tab Content -->
-                    <div class="side-tab-content-wrapper">
-                        <!-- 회사개요 탭 -->
-                        <div class="side-tab-content active" id="overview">
-                            <!-- Company Overview Content -->
-                            <div class="company-overview-integrated">
-                                <div class="overview-content">
-                                    <div class="overview-info">
-                                        <div class="company-basic-info">
-                                            <div class="info-grid">
-                                                <div class="info-item">
-                                                    <div class="info-label">회사명</div>
-                                                    <div class="info-value">NK (엔케이)</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-label">대표자</div>
-                                                    <div class="info-value">김남진</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-label">설립연도</div>
-                                                    <div class="info-value">2010년 08월</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-label">직원수</div>
-                                                    <div class="info-value">6명</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-label">자본금</div>
-                                                    <div class="info-value">5억원</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-label">소재지</div>
-                                                    <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="company-stats">
-                                            <div class="stat-item">
-                                                <div class="stat-image">
-                                                    <img src="images/company-overview.png" alt="회사전경" />
-                                                </div>
-                                                <div class="stat-content">
-                                                    <div class="stat-number">800㎡</div>
-                                                    <div class="stat-label">대지면적</div>
-                                                </div>
-                                            </div>
-                                            <div class="stat-item">
-                                                <div class="stat-image">
-                                                    <img src="images/office-building.png" alt="사무동" />
-                                                </div>
-                                                <div class="stat-content">
-                                                    <div class="stat-number">70㎡</div>
-                                                    <div class="stat-label">사무동</div>
-                                                </div>
-                                            </div>
-                                            <div class="stat-item">
-                                                <div class="stat-image">
-                                                    <img src="images/assembly-building.png" alt="조립동" />
-                                                </div>
-                                                <div class="stat-content">
-                                                    <div class="stat-number">150㎡</div>
-                                                    <div class="stat-label">조립동</div>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                    <div class="benefits-showcase">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h4>산업 전문성</h4>
+                            <p>자동차, 전자, 제약, 식품 가공 산업에 특화된 솔루션을 제공합니다.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h4>맞춤형 솔루션</h4>
+                            <p>모든 프로젝트는 고객의 특정 요구사항에 맞춰 설계되어 최적의 성능과 투자 수익률을 보장합니다.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>종합 서비스</h4>
+                            <p>초기 상담부터 설치, 교육, 지속적인 지원까지 모든 단계에서 함께합니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- Company Information Grid -->
+                    <div class="company-info-section">
+                        <div class="company-basic-info">
+                            <h3>기업 정보</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <div class="info-label">회사명</div>
+                                    <div class="info-value">NK (엔케이)</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">대표자</div>
+                                    <div class="info-value">김남진</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">설립연도</div>
+                                    <div class="info-value">2010년 08월</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">직원수</div>
+                                    <div class="info-value">6명</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">자본금</div>
+                                    <div class="info-value">5억원</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">소재지</div>
+                                    <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="company-facilities">
+                            <h3>시설 현황</h3>
+                            <div class="facilities-grid">
+                                <div class="facility-item">
+                                    <div class="facility-image">
+                                        <img src="images/company-overview.png" alt="회사전경" />
+                                    </div>
+                                    <div class="facility-info">
+                                        <div class="facility-number">800㎡</div>
+                                        <div class="facility-label">대지면적</div>
+                                    </div>
+                                </div>
+                                <div class="facility-item">
+                                    <div class="facility-image">
+                                        <img src="images/office-building.png" alt="사무동" />
+                                    </div>
+                                    <div class="facility-info">
+                                        <div class="facility-number">70㎡</div>
+                                        <div class="facility-label">사무동</div>
+                                    </div>
+                                </div>
+                                <div class="facility-item">
+                                    <div class="facility-image">
+                                        <img src="images/assembly-building.png" alt="조립동" />
+                                    </div>
+                                    <div class="facility-info">
+                                        <div class="facility-number">150㎡</div>
+                                        <div class="facility-label">조립동</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- 조직도 탭 -->
-                        <div class="side-tab-content" id="organization">
-                            <div class="company-organization">
-                                <div class="organization-chart">
-                                    <img src="images/조직도.png" alt="NKI 조직도" class="organization-image" />
-                                </div>
+                    </div>
+                </div>
+
+                <!-- CEO Message 탭 -->
+                <div class="company-tab-content" id="ceo-message">
+                    <div class="content-header">
+                        <h2>CEO Message</h2>
+                        <p class="content-subtitle">NKI 대표이사의 인사말씀</p>
+                    </div>
+                    <div class="ceo-message-content">
+                        <div class="ceo-image">
+                            <img src="images/ceo-photo.jpg" alt="CEO 김남진" />
+                        </div>
+                        <div class="ceo-text">
+                            <h3>안녕하십니까, NKI 대표이사 김남진입니다.</h3>
+                            <p>2010년 설립 이래, NKI는 산업 자동화 분야에서 끊임없는 혁신과 발전을 거듭해왔습니다.</p>
+                            <p>우리는 반도체, 태양광, 자동화 설비 분야에서 축적된 기술력과 경험을 바탕으로 고객의 성공적인 비즈니스를 위한 최고의 솔루션을 제공하고 있습니다.</p>
+                            <p>앞으로도 지속적인 기술 개발과 혁신을 통해 고객과 함께 성장하는 NKI가 되겠습니다.</p>
+                            <div class="ceo-signature">
+                                <strong>NKI 대표이사 김남진</strong>
                             </div>
                         </div>
-                        
-                        <!-- 연혁 탭 -->
-                        <div class="side-tab-content" id="history">
-                            <div class="company-history">
-                                <div class="timeline">
-                                    <table class="timeline-table">
-                                        <thead>
-                                            <tr>
-                                                <th>년도</th>
-                                                <th>주요 실적</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="year-cell">2017년<br>~2024년</td>
-                                                <td class="events-cell">
-                                                    <div class="event-item">H社 태양광 CELL IN LINE ( M6 , M10 , M12)</div>
-                                                    <div class="event-item">H社 태양광 CELL Spray Coater</div>
-                                                    <div class="event-item">H社 Inkjet Coater</div>
-                                                    <div class="event-item">S社 태양광 CELL Coater (해외 向)</div>
-                                                    <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                                    <div class="event-item">H社 반도체 PAD STOCKER #1-4 제작</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="year-cell">2012년<br>~2017년</td>
-                                                <td class="events-cell">
-                                                    <div class="event-item">T社 3.5″~26″ OCR VACUUM LAMINATION</div>
-                                                    <div class="event-item">H社 Pellicle 검사기 Loader #5-8 제작</div>
-                                                    <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="year-cell">2011년</td>
-                                                <td class="events-cell">
-                                                    <div class="event-item">K社 6G OVEN #2,4,5 제작</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="year-cell">2010년</td>
-                                                <td class="events-cell">
-                                                    <div class="event-item">2010. 08. 15 엔케이 설립</div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                    </div>
+                </div>
+
+                <!-- 사업부 소개 탭 -->
+                <div class="company-tab-content" id="business">
+                    <div class="content-header">
+                        <h2>사업부 소개</h2>
+                        <p class="content-subtitle">NKI의 전문화된 사업 영역</p>
+                    </div>
+                    <div class="business-divisions">
+                        <div class="division-card">
+                            <div class="division-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h4>반도체 사업부</h4>
+                            <p>반도체 검사기 및 관련 자동화 설비 설계·제작</p>
+                        </div>
+                        <div class="division-card">
+                            <div class="division-icon">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <h4>태양광 사업부</h4>
+                            <p>태양광 CELL 생산라인 및 코팅 장비 전문</p>
+                        </div>
+                        <div class="division-card">
+                            <div class="division-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>자동화 사업부</h4>
+                            <p>산업용 자동화 설비 설계 및 시스템 구축</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 지속가능경영 탭 -->
+                <div class="company-tab-content" id="organization">
+                    <div class="content-header">
+                        <h2>지속가능경영</h2>
+                        <p class="content-subtitle">미래를 위한 NKI의 지속가능한 경영 철학</p>
+                    </div>
+                    <div class="sustainability-content">
+                        <div class="organization-chart">
+                            <img src="images/조직도.png" alt="NKI 조직도" class="organization-image" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 연혁 탭 -->
+                <div class="company-tab-content" id="history">
+                    <div class="content-header">
+                        <h2>연혁</h2>
+                        <p class="content-subtitle">NKI의 성장 발자취</p>
+                    </div>
+                    <div class="history-timeline">
+                        <div class="timeline-table-wrapper">
+                            <table class="modern-timeline-table">
+                                <thead>
+                                    <tr>
+                                        <th>년도</th>
+                                        <th>주요 실적</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="year-cell">2017년~2024년</td>
+                                        <td class="events-cell">
+                                            <div class="event-item">H社 태양광 CELL IN LINE ( M6 , M10 , M12)</div>
+                                            <div class="event-item">H社 태양광 CELL Spray Coater</div>
+                                            <div class="event-item">H社 Inkjet Coater</div>
+                                            <div class="event-item">S社 태양광 CELL Coater (해외 向)</div>
+                                            <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
+                                            <div class="event-item">H社 반도체 PAD STOCKER #1-4 제작</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="year-cell">2012년~2017년</td>
+                                        <td class="events-cell">
+                                            <div class="event-item">T社 3.5″~26″ OCR VACUUM LAMINATION</div>
+                                            <div class="event-item">H社 Pellicle 검사기 Loader #5-8 제작</div>
+                                            <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="year-cell">2011년</td>
+                                        <td class="events-cell">
+                                            <div class="event-item">K社 6G OVEN #2,4,5 제작</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="year-cell">2010년</td>
+                                        <td class="events-cell">
+                                            <div class="event-item">2010. 08. 15 엔케이 설립</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NKI Family 탭 -->
+                <div class="company-tab-content" id="family">
+                    <div class="content-header">
+                        <h2>NKI Family</h2>
+                        <p class="content-subtitle">함께 성장하는 NKI의 가족들</p>
+                    </div>
+                    <div class="family-content">
+                        <div class="family-values">
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-users"></i>
                                 </div>
+                                <h4>팀워크</h4>
+                                <p>서로 신뢰하고 협력하는 조직문화</p>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>혁신</h4>
+                                <p>끊임없는 도전과 창의적 사고</p>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h4>고객만족</h4>
+                                <p>고객 중심의 서비스 정신</p>
                             </div>
                         </div>
                     </div>

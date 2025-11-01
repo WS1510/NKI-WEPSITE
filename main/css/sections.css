@@ -1,3 +1,505 @@
+/* Company Hero Section */
+.company-hero {
+    height: 60vh;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.company-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.company-hero-content {
+    position: relative;
+    z-index: 2;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+.hero-main-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+}
+
+.hero-divider {
+    width: 60px;
+    height: 3px;
+    background: white;
+    margin: 0 auto;
+}
+
+/* Company Navigation Section */
+.company-nav-section {
+    background: white;
+    border-bottom: 1px solid #e1e8ed;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+}
+
+.company-nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.company-nav-btn {
+    padding: 1.5rem 2rem;
+    border: none;
+    background: transparent;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: 140px;
+    text-align: center;
+}
+
+.company-nav-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.company-nav-btn:hover {
+    color: var(--primary-color);
+    background: rgba(11, 83, 148, 0.05);
+}
+
+.company-nav-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.company-nav-btn.active::after {
+    transform: scaleX(1);
+}
+
+/* Company Content Area */
+.company-content-area {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.company-tab-content {
+    display: none;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.company-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.content-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.content-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Benefits Showcase */
+.benefits-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Company Information Section */
+.company-info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.company-basic-info h3,
+.company-facilities h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-label {
+    font-weight: 600;
+    color: #666;
+}
+
+.info-value {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.facility-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.facility-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.facility-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.facility-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.2rem;
+}
+
+/* CEO Message Content */
+.ceo-message-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ceo-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.ceo-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.ceo-text p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.ceo-signature {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e1e8ed;
+}
+
+/* Business Divisions */
+.business-divisions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.division-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.division-card:hover {
+    transform: translateY(-5px);
+}
+
+.division-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.division-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Sustainability Content */
+.sustainability-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Modern Timeline Table */
+.timeline-table-wrapper {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.modern-timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-timeline-table th {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.modern-timeline-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.modern-timeline-table .year-cell {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: var(--primary-color);
+    width: 200px;
+    text-align: center;
+}
+
+.modern-timeline-table .event-item {
+    padding: 0.5rem 0;
+    color: #666;
+}
+
+/* Family Values */
+.family-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.value-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.value-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-main-title {
+        font-size: 3rem;
+    }
+    
+    .company-nav-btn {
+        padding: 1rem 1.5rem;
+        min-width: 120px;
+    }
+    
+    .company-info-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .ceo-message-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .company-nav-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .company-nav-btn {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 0;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .content-header h2 {
+        font-size: 2rem;
+    }
+    
+    .benefits-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .facility-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* Side Tabs System */
 .side-tabs-container {
     margin-top: 4rem;
