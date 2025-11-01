@@ -1,0 +1,205 @@
+/* Tab Components - 탭 스타일 */
+
+/* Company Navigation Tabs */
+.company-nav-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-fixed);
+}
+
+.company-nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.company-nav-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.company-nav-btn {
+    background: transparent;
+    border: none;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-medium);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    position: relative;
+    white-space: nowrap;
+    min-width: 140px;
+    border-bottom: 3px solid transparent;
+}
+
+.company-nav-btn:hover {
+    color: var(--primary-color);
+    background-color: rgba(33, 102, 255, 0.05);
+}
+
+.company-nav-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background-color: rgba(33, 102, 255, 0.1);
+}
+
+.company-nav-btn span {
+    display: block;
+}
+
+/* Tab Content */
+.company-content-area {
+    padding: var(--spacing-2xl) 0;
+}
+
+.company-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.company-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Content Headers */
+.content-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.content-header h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.content-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    line-height: var(--line-height-relaxed);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Side Tabs (기존 스타일 유지용) */
+.tabs-container {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+}
+
+.tab-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    min-width: 200px;
+}
+
+.tab-btn {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-align: left;
+    border-radius: var(--radius);
+}
+
+.tab-btn:hover {
+    background-color: var(--gray-100);
+    border-color: var(--primary-color);
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.tab-content {
+    flex: 1;
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Tabs */
+@media (max-width: 768px) {
+    .company-nav-tabs {
+        justify-content: flex-start;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .company-nav-btn {
+        min-width: 120px;
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+    }
+    
+    .tabs-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .tab-buttons {
+        flex-direction: row;
+        overflow-x: auto;
+        min-width: auto;
+        gap: var(--spacing-xs);
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+        min-width: 120px;
+        text-align: center;
+    }
+    
+    .tab-content {
+        padding: var(--spacing-lg);
+    }
+}

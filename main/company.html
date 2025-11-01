@@ -4,34 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회사소개 - NKI</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/features.css">
-    <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/navigation.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header scrolled">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html" aria-label="홈으로 이동"><h1>NKI</h1></a>
+        <div class="header-content">
+            <!-- Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="company.html" class="active">회사소개</a></li>
-                        <li><a href="service.html">우리의 서비스</a></li>
-                        <li><a href="contact.html">견적문의</a></li>
-                    </ul>
-                </nav>
+            </button>
+            
+            <!-- Logo (Center) -->
+            <div class="logo">
+                <a href="index.html" aria-label="홈으로 이동">
+                    <h1>NKI</h1>
+                </a>
             </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav" id="navMenu">
+                <div class="nav-header">
+                    <div class="nav-logo">NKI</div>
+                    <div class="nav-subtitle">National Korea Industry</div>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="company.html" class="active">
+                            <span class="nav-icon"><i class="fas fa-building"></i></span>
+                            회사소개
+                        </a>
+                    </li>
+                    <li>
+                        <a href="service.html">
+                            <span class="nav-icon"><i class="fas fa-cogs"></i></span>
+                            우리의 서비스
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+                            견적문의
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-contact">
+                    <div class="nav-contact-title">연락처</div>
+                    <div class="nav-contact-info">
+                        <div>TEL: <a href="tel:041-583-8598">041-583-8598</a></div>
+                        <div>EMAIL: <a href="mailto:njkim2010@nki-1.co.kr">njkim2010@nki-1.co.kr</a></div>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
 
     <!-- Company Introduction Section -->
     <section class="company-page">

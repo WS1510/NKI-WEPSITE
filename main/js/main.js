@@ -6,6 +6,59 @@ document.addEventListener('DOMContentLoaded', function() {
     // designated sales email for quote requests (test address)
     const SALES_EMAIL = 'gg6532@nki-1.co.kr';
     
+    // Modern Navigation Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    
+    if (menuToggle && navMenu && menuOverlay) {
+        // Toggle menu function
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Close menu function
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Event listeners
+        menuToggle.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+        
+        // Close menu when clicking on nav links
+        const navLinks = navMenu.querySelectorAll('.nav-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+        
+        // Close menu on window resize (for better UX)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    }
+    
     // toggle header scrolled state using class (avoids inline style overrides)
     // once the header becomes 'scrolled' it will remain so for the session
     let headerScrolledOnce = false;
