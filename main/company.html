@@ -13,485 +13,179 @@
     <!-- Header -->
     <header class="header scrolled">
         <div class="header-content">
-            <!-- Menu Toggle Button -->
-            <button class="menu-toggle" id="menuToggle">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            
             <!-- Logo (Center) -->
             <div class="logo">
-                <a href="index.html" aria-label="홈으로 이동">
+                <a href="index.html" aria-label="홈으로 이동" title="홈페이지로 이동">
                     <h1>NKI</h1>
                 </a>
             </div>
-            
-            <!-- Navigation Menu -->
-            <nav class="nav" id="navMenu">
-                <div class="nav-header">
-                    <div class="nav-logo">NKI</div>
-                    <div class="nav-subtitle">National Korea Industry</div>
-                </div>
-                <ul class="nav-list">
-                    <li>
-                        <a href="company.html" class="active">
-                            <span class="nav-icon"><i class="fas fa-building"></i></span>
-                            회사소개
-                        </a>
-                    </li>
-                    <li>
-                        <a href="service.html">
-                            <span class="nav-icon"><i class="fas fa-cogs"></i></span>
-                            우리의 서비스
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact.html">
-                            <span class="nav-icon"><i class="fas fa-envelope"></i></span>
-                            견적문의
-                        </a>
-                    </li>
-                </ul>
-                <div class="nav-contact">
-                    <div class="nav-contact-title">연락처</div>
-                    <div class="nav-contact-info">
-                        <div>TEL: <a href="tel:041-583-8598">041-583-8598</a></div>
-                        <div>EMAIL: <a href="mailto:njkim2010@nki-1.co.kr">njkim2010@nki-1.co.kr</a></div>
-                    </div>
-                </div>
-            </nav>
         </div>
     </header>
 
-    <!-- Menu Overlay -->
-    <div class="menu-overlay" id="menuOverlay"></div>
-
-    <!-- Company Introduction Section -->
-    <section class="company-page">
-        <!-- Hero Section with Background Image -->
-        <div class="company-hero">
-            <div class="company-hero-background">
-                <div class="hero-overlay"></div>
-                <div class="container">
-                    <div class="company-hero-content">
-                        <div class="hero-subtitle">Company Information</div>
-                        <h1 class="hero-main-title">회사소개</h1>
-                        <div class="hero-divider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navigation Tabs -->
-        <div class="company-nav-section">
+    <!-- Hero Section -->
+    <section class="hero company-hero" id="company">
+        <div class="hero-background">
             <div class="container">
-                <div class="company-nav-tabs">
-                    <button class="company-nav-btn active" data-tab="overview">
-                        <span>회사 개요</span>
-                    </button>
-                    <button class="company-nav-btn" data-tab="business">
-                        <span>조직 및 사업부</span>
-                    </button>
-                    <button class="company-nav-btn" data-tab="organization">
-                        <span>지속가능경영</span>
-                    </button>
-                    <button class="company-nav-btn" data-tab="history">
-                        <span>연혁</span>
-                    </button>
-                    <button class="company-nav-btn" data-tab="family">
-                        <span>NKI Family</span>
-                    </button>
+                <div class="hero-content">
+                    <h2 class="hero-title">NKI 회사소개</h2>
+                    <p class="hero-description">
+                        2010년 설립 이래 15년간 축적된 전문 기술력으로,<br>NKI는 반도체·태양광·자동화 분야에서 대기업과 함께하는<br>신뢰받는 기술 파트너로 성장해왔습니다
+                    </p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Tab Content Area -->
-        <div class="company-content-area">
-            <div class="container">
-                <!-- 회사개요 탭 -->
-                <div class="company-tab-content active" id="overview">
-                    <div class="content-header">
-                        <h2>회사개요</h2>
-                        <p class="content-subtitle">2010년 설립 이래 15년간 축적된 전문 기술력으로,<br>NKI는 반도체·태양광·자동화 분야에서 대기업과 함께하는<br>신뢰받는 기술 파트너로 성장해왔습니다</p>
-                    </div>
-
-                    <div class="benefits-showcase">
-                        <div class="benefit-card">
-                            <div class="benefit-icon">
+                
+                <!-- Company Information Cards -->
+                <div class="hero-quick-links">
+                    <div class="quick-links-grid">
+                        <div class="quick-link-card">
+                            <div class="quick-link-icon">
                                 <i class="fas fa-award"></i>
                             </div>
-                            <h4>검증된 실적</h4>
-                            <p>15년간 축적된 전문 노하우와<br>대기업과의 지속적인 파트너십을 통해<br>업계에서 인정받는 신뢰성을 구축했습니다</p>
+                            <h3>검증된 실적</h3>
+                            <p>15년간 축적된 전문 노하우와<br>대기업과의 지속적인 파트너십</p>
                         </div>
-                        
-                        <div class="benefit-card">
-                            <div class="benefit-icon">
+                        <div class="quick-link-card">
+                            <div class="quick-link-icon">
                                 <i class="fas fa-lightbulb"></i>
                             </div>
-                            <h4>혁신과 특허</h4>
-                            <p>특허 기술 개발과 국정 사업 참여를 통해<br>지속적인 기술 혁신과<br>사업 확장을 추진합니다</p>
+                            <h3>혁신과 특허</h3>
+                            <p>특허 기술 개발과 국정 사업 참여를 통한<br>지속적인 기술 혁신</p>
                         </div>
-
-                        <div class="benefit-card">
-                            <div class="benefit-icon">
+                        <div class="quick-link-card">
+                            <div class="quick-link-icon">
                                 <i class="fas fa-handshake"></i>
                             </div>
-                            <h4>고객 중심</h4>
-                            <p>고객의 요구사항을 정확히 파악하여<br>최적화된 맞춤형 솔루션을<br>제공합니다</p>
-                        </div>
-                    </div>
-
-                    <!-- Company Information Grid -->
-                    <div class="company-info-section">
-                        <div class="company-basic-info">
-                            <h3>기업 정보</h3>
-                            <div class="info-grid">
-                                <div class="info-item">
-                                    <div class="info-label">회사명</div>
-                                    <div class="info-value">NK (엔케이)</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">대표자</div>
-                                    <div class="info-value">김남진</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">설립연도</div>
-                                    <div class="info-value">2010년 08월</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">직원수</div>
-                                    <div class="info-value">6명</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">자본금</div>
-                                    <div class="info-value">5억원</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-label">소재지</div>
-                                    <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-facilities">
-                            <h3>시설 현황</h3>
-                            <div class="facilities-grid">
-                                <div class="facility-item">
-                                    <div class="facility-image">
-                                        <img src="images/company-overview.png" alt="회사전경" />
-                                    </div>
-                                    <div class="facility-info">
-                                        <div class="facility-number">800㎡</div>
-                                        <div class="facility-label">대지면적</div>
-                                    </div>
-                                </div>
-                                <div class="facility-item">
-                                    <div class="facility-image">
-                                        <img src="images/office-building.png" alt="사무동" />
-                                    </div>
-                                    <div class="facility-info">
-                                        <div class="facility-number">70㎡</div>
-                                        <div class="facility-label">사무동</div>
-                                    </div>
-                                </div>
-                                <div class="facility-item">
-                                    <div class="facility-image">
-                                        <img src="images/assembly-building.png" alt="조립동" />
-                                    </div>
-                                    <div class="facility-info">
-                                        <div class="facility-number">150㎡</div>
-                                        <div class="facility-label">조립동</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3>고객 중심</h3>
+                            <p>고객의 요구사항을 정확히 파악하여<br>최적화된 맞춤형 솔루션 제공</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- 조직 및 사업부 탭 -->
-                <div class="company-tab-content" id="business">
-                    <div class="content-header">
-                        <h2>조직 및 사업부</h2>
-                        <p class="content-subtitle">NKI의 조직 구조와 전문화된 사업 영역</p>
-                    </div>
-
-                    <!-- 조직도 섹션 -->
-                    <div class="organization-section">
-                        <h3>조직도</h3>
-                        <div class="organization-chart">
-                            <img src="images/조직도.png" alt="NKI 조직도" class="organization-image" />
+    <!-- Company Information Section -->
+    <section class="section company-info-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>기업 정보</h2>
+                <p>NKI의 기본 정보와 시설 현황을 확인하세요</p>
+            </div>
+            
+            <div class="company-info-grid">
+                <!-- Basic Company Info -->
+                <div class="info-card">
+                    <h3>기업 개요</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">회사명</div>
+                            <div class="info-value">NKI (엔케이아이)</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">대표자</div>
+                            <div class="info-value">김남진</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">설립연도</div>
+                            <div class="info-value">2010년 08월</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">직원수</div>
+                            <div class="info-value">6명</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">자본금</div>
+                            <div class="info-value">5억원</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">소재지</div>
+                            <div class="info-value">충남 천안시 서북구 직산읍 125-11</div>
                         </div>
                     </div>
-
-                    <!-- 사업부 소개 섹션 -->
-                    <div class="business-divisions-section">
-                        <h3>주요 사업 영역</h3>
-                        <div class="business-divisions">
-                            <div class="division-card">
-                                <div class="division-icon">
-                                    <i class="fas fa-microchip"></i>
-                                </div>
+                </div>
+                
+                <!-- Business Areas -->
+                <div class="info-card">
+                    <h3>주요 사업 영역</h3>
+                    <div class="business-areas">
+                        <div class="business-item">
+                            <div class="business-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="business-content">
                                 <h4>반도체 장비</h4>
-                                <p>Pellicle 검사기 및<br>반도체 자동화 설비 전문</p>
+                                <p>Pellicle 검사기 및 반도체 자동화 설비 전문</p>
                             </div>
-                            <div class="division-card">
-                                <div class="division-icon">
-                                    <i class="fas fa-solar-panel"></i>
-                                </div>
+                        </div>
+                        <div class="business-item">
+                            <div class="business-icon">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <div class="business-content">
                                 <h4>태양광 장비</h4>
-                                <p>CELL 생산라인 및<br>코팅 장비(Spray/Inkjet) 전문</p>
+                                <p>CELL 생산라인 및 코팅 장비(Spray/Inkjet) 전문</p>
                             </div>
-                            <div class="division-card">
-                                <div class="division-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
+                        </div>
+                        <div class="business-item">
+                            <div class="business-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="business-content">
                                 <h4>자동화 설비</h4>
-                                <p>산업용 자동화 장비 설계<br>및 맞춤형 솔루션 제공</p>
-                            </div>
-                        </div>
-                        
-                        <!-- 팀 구성 -->
-                        <div class="team-composition">
-                            <h3>조직 구성 (6명)</h3>
-                            <div class="team-overview">
-                                <div class="team-summary">
-                                    <p>작지만 전문성을 갖춘 6명의 팀원이 각자의 전문 분야에서 협력하여<br>고품질의 자동화 솔루션을 제공합니다</p>
-                                </div>
-                            </div>
-                            
-                            <div class="team-info">
-                                <div class="team-card ceo-card">
-                                    <div class="team-icon">
-                                        <i class="fas fa-crown"></i>
-                                    </div>
-                                    <h4>대표이사</h4>
-                                    <div class="team-role">김남진</div>
-                                    <p>경영 총괄 및 영업<br>고객 관계 관리<br>사업 전략 수립</p>
-                                </div>
-                                <div class="team-card">
-                                    <div class="team-icon">
-                                        <i class="fas fa-drafting-compass"></i>
-                                    </div>
-                                    <h4>설계 엔지니어</h4>
-                                    <div class="team-role">2명</div>
-                                    <p>기계 설계<br>자동화 시스템 설계<br>3D 모델링 및 도면 작성</p>
-                                </div>
-                                <div class="team-card">
-                                    <div class="team-icon">
-                                        <i class="fas fa-tools"></i>
-                                    </div>
-                                    <h4>제작 기술자</h4>
-                                    <div class="team-role">2명</div>
-                                    <p>기계 가공 및 조립<br>현장 설치<br>장비 테스트</p>
-                                </div>
-                                <div class="team-card">
-                                    <div class="team-icon">
-                                        <i class="fas fa-user-cog"></i>
-                                    </div>
-                                    <h4>관리 담당</h4>
-                                    <div class="team-role">1명</div>
-                                    <p>품질 관리<br>자재 구매<br>일정 관리 및 사무</p>
-                                </div>
-                            </div>
-
-                            <!-- 업무 프로세스 -->
-                            <div class="work-process">
-                                <h4>협업 프로세스</h4>
-                                <div class="process-flow">
-                                    <div class="process-step">
-                                        <div class="step-number">1</div>
-                                        <div class="step-content">
-                                            <h5>영업 및 기획</h5>
-                                            <p>대표이사가 고객 요구사항 파악 및 프로젝트 기획</p>
-                                        </div>
-                                    </div>
-                                    <div class="process-arrow">→</div>
-                                    <div class="process-step">
-                                        <div class="step-number">2</div>
-                                        <div class="step-content">
-                                            <h5>설계 및 개발</h5>
-                                            <p>설계 엔지니어가 기술적 솔루션 개발</p>
-                                        </div>
-                                    </div>
-                                    <div class="process-arrow">→</div>
-                                    <div class="process-step">
-                                        <div class="step-number">3</div>
-                                        <div class="step-content">
-                                            <h5>제작 및 조립</h5>
-                                            <p>제작 기술자가 실제 장비 제작 및 조립</p>
-                                        </div>
-                                    </div>
-                                    <div class="process-arrow">→</div>
-                                    <div class="process-step">
-                                        <div class="step-number">4</div>
-                                        <div class="step-content">
-                                            <h5>품질 관리</h5>
-                                            <p>관리 담당이 품질 검증 및 납품 준비</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p>산업용 자동화 장비 설계 및 맞춤형 솔루션 제공</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- 지속가능경영 탭 -->
-                <div class="company-tab-content" id="organization">
-                    <div class="content-header">
-                        <h2>지속가능경영</h2>
-                        <p class="content-subtitle">작지만 강한 조직, NKI의 지속가능한 성장을 위한 경영 철학</p>
-                    </div>
-                    <div class="sustainability-content">
-                        <!-- 경영 철학 -->
-                        <div class="management-philosophy">
-                            <h3>경영 철학</h3>
-                            <div class="philosophy-text">
-                                <p>NKI는 '작지만 강한 기업'을 지향합니다. 6명의 전문가가 모여 15년간 쌓아온 기술력과 신뢰를 바탕으로, 
-                                고객과 함께 성장하며 지속가능한 미래를 만들어갑니다</p>
-                            </div>
-                        </div>
-
-                        <!-- 핵심 가치 -->
-                        <div class="sustainability-values">
-                            <div class="sustainability-card">
-                                <div class="sustainability-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <h4>신뢰와 협력</h4>
-                                <p>고객과의 장기적 파트너십을<br>바탕으로 한 신뢰 경영</p>
-                            </div>
-                            <div class="sustainability-card">
-                                <div class="sustainability-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <h4>기술 혁신</h4>
-                                <p>지속적인 기술 개발과<br>특허 확보를 통한 경쟁력 강화</p>
-                            </div>
-                            <div class="sustainability-card">
-                                <div class="sustainability-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h4>인재 중심</h4>
-                                <p>전문성을 갖춘 인재 육성과<br>팀워크 기반 조직 운영</p>
-                            </div>
-                            <div class="sustainability-card">
-                                <div class="sustainability-icon">
-                                    <i class="fas fa-seedling"></i>
-                                </div>
-                                <h4>지속 성장</h4>
-                                <p>안정적 성장을 통한<br>장기적 발전 추구</p>
-                            </div>
-                        </div>
-
-                        <!-- 사회적 책임 -->
-                        <div class="social-responsibility">
-                            <h3>사회적 책임</h3>
-                            <div class="responsibility-grid">
-                                <div class="responsibility-item">
-                                    <div class="responsibility-icon">
-                                        <i class="fas fa-leaf"></i>
-                                    </div>
-                                    <h4>친환경 경영</h4>
-                                    <p>환경을 고려한 설계와 제작 프로세스를 통해 지속가능한 제품 개발에 기여합니다</p>
-                                </div>
-                                <div class="responsibility-item">
-                                    <div class="responsibility-icon">
-                                        <i class="fas fa-building"></i>
-                                    </div>
-                                    <h4>지역사회 공헌</h4>
-                                    <p>천안 지역 산업 발전에 기여하며, 지역 기업과의 상생 협력을 실천합니다</p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Company History Section -->
+    <section class="section company-history-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>연혁</h2>
+                <p>NKI의 성장 발자취</p>
+            </div>
+            
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2017년~2024년</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>H社 태양광 CELL IN LINE (M6, M10, M12)</li>
+                            <li>H社 태양광 CELL Spray Coater</li>
+                            <li>H社 Inkjet Coater</li>
+                            <li>S社 태양광 CELL Coater (해외 向)</li>
+                            <li>H社 Pellicle 검사기 Loader #9-11 제작</li>
+                            <li>H社 반도체 PAD STOCKER #1-4 제작</li>
+                        </ul>
                     </div>
                 </div>
-
-                <!-- 연혁 탭 -->
-                <div class="company-tab-content" id="history">
-                    <div class="content-header">
-                        <h2>연혁</h2>
-                        <p class="content-subtitle">NKI의 성장 발자취</p>
-                    </div>
-                    <div class="history-timeline">
-                        <div class="timeline-table-wrapper">
-                            <table class="modern-timeline-table">
-                                <thead>
-                                    <tr>
-                                        <th>년도</th>
-                                        <th>주요 실적</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="year-cell">2017년~2024년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">H社 태양광 CELL IN LINE ( M6 , M10 , M12)</div>
-                                            <div class="event-item">H社 태양광 CELL Spray Coater</div>
-                                            <div class="event-item">H社 Inkjet Coater</div>
-                                            <div class="event-item">S社 태양광 CELL Coater (해외 向)</div>
-                                            <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                            <div class="event-item">H社 반도체 PAD STOCKER #1-4 제작</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="year-cell">2012년~2017년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">T社 3.5″~26″ OCR VACUUM LAMINATION</div>
-                                            <div class="event-item">H社 Pellicle 검사기 Loader #5-8 제작</div>
-                                            <div class="event-item">H社 Pellicle 검사기 Loader #9-11 제작</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="year-cell">2011년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">K社 6G OVEN #2,4,5 제작</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="year-cell">2010년</td>
-                                        <td class="events-cell">
-                                            <div class="event-item">2010. 08. 15 엔케이 설립</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2012년~2017년</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>T社 3.5″~26″ OCR VACUUM LAMINATION</li>
+                            <li>H社 Pellicle 검사기 Loader #5-8 제작</li>
+                            <li>H社 Pellicle 검사기 Loader #9-11 제작</li>
+                        </ul>
                     </div>
                 </div>
-
-                <!-- NKI Family 탭 -->
-                <div class="company-tab-content" id="family">
-                    <div class="content-header">
-                        <h2>NKI Family</h2>
-                        <p class="content-subtitle">함께 성장하는 NKI의 가족들</p>
+                <div class="timeline-item">
+                    <div class="timeline-year">2011년</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>K社 6G OVEN #2,4,5 제작</li>
+                        </ul>
                     </div>
-                    <div class="family-content">
-                        <div class="family-values">
-                            <div class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h4>팀워크</h4>
-                                <p>서로 신뢰하고 협력하는<br>조직문화</p>
-                            </div>
-                            <div class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <h4>혁신</h4>
-                                <p>끊임없는 도전과<br>창의적 사고</p>
-                            </div>
-                            <div class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                                <h4>고객만족</h4>
-                                <p>고객 중심의<br>서비스 정신</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2010년</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>2010. 08. 15 엔케이 설립</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -506,13 +200,23 @@
                     <div class="footer-center-inner">
                         <h2 class="footer-company">NKI(엔케이아이)</h2>
                         <div class="footer-company-lines">
-                            <p>COMPANY : NKI(엔케이아이), OWNER : 김 남 진, TEL : 041) 583-8598, FAX : 041) 583-8599, E-mail : njkim2010@nki-1.co.kr, ADDRESS : [31029] 충청남도 천안시 서북구 직산읍 신갈리 125-11, (NKI(엔케이아이))</p>
-                            <p>BUSINESS LICENSE : 490-81-02724, 개인정보관리책임자 : 김남진 (@nki-1.co.kr)</p>
+                            <p>
+                                <strong>COMPANY :</strong> NKI(엔케이아이) | 
+                                <strong>OWNER :</strong> 김남진<br>
+                                <strong>TEL :</strong> 041) 583-8598 | 
+                                <strong>FAX :</strong> 041) 583-8599<br>
+                                <strong>E-mail :</strong> njkim2010@nki-1.co.kr
+                            </p>
+                            <p>
+                                <strong>ADDRESS :</strong> [31029] 충청남도 천안시 서북구 직산읍 신갈리 125-11<br>
+                                <strong>BUSINESS LICENSE :</strong> 490-81-02724 | 
+                                <strong>개인정보관리책임자 :</strong> 김남진 (@nki-1.co.kr)
+                            </p>
                         </div>
-                            <div class="footer-note">
-                                <p>COPYRIGHT (c) COMPANY NATIONAL KOREA INDUSTRY Co.,Ltd , ALL RIGHTS RESERVED</p>
-                                <p class="footer-small">본 사이트에 사용된 모든 이미지와 내용의 무단도용을 금지 합니다. Design by Company NKI</p>
-                            </div>
+                        <div class="footer-note">
+                            <p>COPYRIGHT (c) COMPANY NATIONAL KOREA INDUSTRY Co.,Ltd , ALL RIGHTS RESERVED</p>
+                            <p class="footer-small">본 사이트에 사용된 모든 이미지와 내용의 무단도용을 금지 합니다. Design by Company NKI</p>
+                        </div>
                     </div>
                 </div>
             </div>

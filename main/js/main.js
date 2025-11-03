@@ -6,55 +6,58 @@ document.addEventListener('DOMContentLoaded', function() {
     // designated sales email for quote requests (test address)
     const SALES_EMAIL = 'gg6532@nki-1.co.kr';
     
-    // Modern Navigation Menu Toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
+    // Check if we're on the home page
+    const isHomePage = document.body.classList.contains('home-page') || 
+                      window.location.pathname === '/' || 
+                      window.location.pathname.endsWith('index.html') ||
+                      window.location.pathname === '/index.html';
     
-    if (menuToggle && navMenu && menuOverlay) {
-        // Toggle menu function
-        function toggleMenu() {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            menuOverlay.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        }
+    // 현재 페이지에 따라 네비게이션 활성화
+    function setActiveNavigation() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-list a');
         
-        // Close menu function
-        function closeMenu() {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        
-        // Event listeners
-        menuToggle.addEventListener('click', toggleMenu);
-        menuOverlay.addEventListener('click', closeMenu);
-        
-        // Close menu when clicking on nav links
-        const navLinks = navMenu.querySelectorAll('.nav-list a');
         navLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-        
-        // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                closeMenu();
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            
+            // 현재 페이지와 링크가 일치하는지 확인
+            if ((currentPath.endsWith('company.html') && href === 'company.html') ||
+                (isHomePage && href === 'index.html')) {
+                link.classList.add('active');
             }
         });
+    }
+    
+    // 페이지 로드 시 네비게이션 활성화
+    setActiveNavigation();
+    
+    // Logo click handler - 명시적으로 메인페이지로 이동
+    const logoLink = document.querySelector('.logo a');
+    if (logoLink) {
+        logoLink.addEventListener('click', function(e) {
+            // 시각적 피드백 먼저 적용
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+            
+            // 이미 메인 페이지에 있다면 페이지 상단으로 스크롤
+            if (isHomePage) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+            // 다른 페이지에서는 기본 링크 동작 허용 (href로 이동)
+        });
         
-        // Close menu on window resize (for better UX)
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
-                closeMenu();
+        // 키보드 접근성 지원 (Enter 키) - 더 안전한 버전
+        logoLink.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
             }
         });
     }
@@ -63,13 +66,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // once the header becomes 'scrolled' it will remain so for the session
     let headerScrolledOnce = false;
     const setHeaderScrolled = () => {
-        if (window.scrollY > 100) {
+        const scrollY = window.scrollY;
+        
+        // Header scroll effect
+        if (scrollY > 100) {
             header.classList.add('scrolled');
             headerScrolledOnce = true;
         } else {
             // only remove if user has never scrolled past threshold in this session
             if (!headerScrolledOnce) {
                 header.classList.remove('scrolled');
+            }
+        }
+        
+        // Hero section fade-out effect (only for home page)
+        if (isHomePage) {
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                const heroHeight = heroSection.offsetHeight;
+                const scrollProgress = Math.min(scrollY / (heroHeight * 0.8), 1);
+                
+                // Calculate opacity (fade out as user scrolls)
+                const opacity = Math.max(1 - scrollProgress, 0);
+                
+                // Calculate transform (slight upward movement)
+                const translateY = scrollProgress * 50;
+                
+                // Apply effects
+                heroSection.style.opacity = opacity;
+                heroSection.style.transform = `translateY(-${translateY}px)`;
             }
         }
     };
@@ -445,31 +470,47 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', animateOnScroll);
     
-    // Initialize default tab (회사소개)
-    document.addEventListener('DOMContentLoaded', function() {
-        const defaultTab = document.querySelector('.tab-nav-btn[data-tab="company"]');
-        const defaultContent = document.querySelector('#company-tab');
-        
-        if (defaultTab && defaultContent) {
-            // Ensure company tab is active by default
-            document.querySelectorAll('.tab-nav-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.main-tab-content').forEach(content => content.classList.remove('active'));
-            
-            defaultTab.classList.add('active');
-            defaultContent.classList.add('active');
-        }
-    });
+    // 삭제된 페이지 관련 기본 탭 설정 제거 (company 페이지 삭제됨)
 
     // Initialize
     animateOnScroll();
+
+    // Scroll Indicator Click Handler (only for home page)
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator && isHomePage) {
+        scrollIndicator.addEventListener('click', function() {
+            const quickLinksSection = document.querySelector('.quick-links-section');
+            if (quickLinksSection) {
+                quickLinksSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+
+    // Hide scroll indicator on scroll
+    function handleScrollIndicatorVisibility() {
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            if (window.scrollY > 100) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            } else {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.style.pointerEvents = 'auto';
+            }
+        }
+    }
+
+    window.addEventListener('scroll', handleScrollIndicatorVisibility);
 
     // Tabs functionality (기존 탭 + 사이드 탭 + 회사 네비게이션 탭)
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     const sideTabButtons = document.querySelectorAll('.side-tab-btn');
     const sideTabContents = document.querySelectorAll('.side-tab-content');
-    const companyNavButtons = document.querySelectorAll('.company-nav-btn');
-    const companyTabContents = document.querySelectorAll('.company-tab-content');
+    // 삭제된 페이지 관련 요소들 제거: companyNavButtons, companyTabContents
 
     // 기존 탭 기능
     tabButtons.forEach(button => {
@@ -507,23 +548,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 회사 네비게이션 탭 기능
-    companyNavButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const targetTab = this.getAttribute('data-tab');
-            
-            // Remove active class from all company nav buttons and contents
-            companyNavButtons.forEach(btn => btn.classList.remove('active'));
-            companyTabContents.forEach(content => content.classList.remove('active'));
-            
-            // Add active class to clicked button and corresponding content
-            this.classList.add('active');
-            const targetContent = document.getElementById(targetTab);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
-        });
-    });
+    // 삭제된 페이지 관련 탭 기능들 제거
+    // - 회사 네비게이션 탭 기능 (company 페이지 삭제됨)
 
     // Show success modal for quote submission
     function showQuoteSuccessModal() {

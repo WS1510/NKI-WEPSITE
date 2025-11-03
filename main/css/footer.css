@@ -1,10 +1,10 @@
 /* Footer Components - 푸터 스타일 */
 
-/* Main Footer */
+/* Main Footer - Compact Version */
 .footer {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-md) 0; /* 패딩 더 줄임 */
     margin-top: auto;
 }
 
@@ -12,6 +12,65 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+}
+
+/* Legacy Footer Structure Support */
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px; /* 높이 더 줄임 */
+}
+
+.footer-center {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.footer-center-inner {
+    padding: var(--spacing-sm); /* 패딩 더 줄임 */
+}
+
+.footer-company {
+    font-size: var(--font-size-lg); /* 크기 더 줄임 */
+    font-weight: var(--font-bold);
+    color: var(--white);
+    margin-bottom: var(--spacing-sm); /* 마진 더 줄임 */
+    letter-spacing: 1px;
+}
+
+.footer-company-lines {
+    margin-bottom: var(--spacing-sm); /* 마진 더 줄임 */
+}
+
+.footer-company-lines p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5; /* 줄 간격 조정 */
+    margin-bottom: var(--spacing-sm); /* 마진 조정 */
+    font-size: 0.85rem; /* 텍스트 크기 약간 증가 */
+}
+
+.footer-company-lines strong {
+    color: rgba(255, 255, 255, 1);
+    font-weight: var(--font-medium);
+}
+
+.footer-note {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: var(--spacing-sm); /* 패딩 더 줄임 */
+}
+
+.footer-note p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-xs); /* 마진 유지 */
+    font-size: 0.75rem; /* 텍스트 크기 더 작게 */
+    line-height: 1.3; /* 줄 간격 더 줄임 */
+}
+
+.footer-small {
+    font-size: 0.7rem !important; /* 더 작은 크기 */
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Footer Content Layout */
@@ -276,7 +335,25 @@
 
 @media (max-width: 480px) {
     .footer {
-        padding: var(--spacing-xl) 0;
+        padding: var(--spacing-md) 0; /* 모바일에서 패딩 더 줄임 */
+    }
+    
+    .footer-row {
+        min-height: 80px; /* 모바일에서 높이 더 줄임 */
+    }
+    
+    .footer-company {
+        font-size: var(--font-size-lg); /* 모바일에서 제목 크기 줄임 */
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .footer-company-lines p {
+        font-size: 10px; /* 모바일에서 텍스트 더 작게 */
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .footer-note p {
+        font-size: 9px; /* 모바일에서 노트 텍스트 더 작게 */
     }
     
     .footer-container {
@@ -287,4 +364,77 @@
         flex-direction: column;
         gap: var(--spacing-xs);
     }
+}
+
+/* 레거시 클래스 지원 */
+.footer-section.company-info,
+.footer-section.quick-links,
+.footer-section.contact-info,
+.footer-section.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-bottom.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+    text-align: center;
+    color: var(--gray-300);
+    font-size: var(--font-size-sm);
+}
+
+/* 추가 레거시 클래스 지원 */
+.company-info h3,
+.quick-links h3,
+.contact-info h3,
+.social-media h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-semibold);
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.company-info p,
+.contact-info p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--gray-200);
+    margin-bottom: var(--spacing-sm);
+}
+
+.quick-links ul,
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li,
+.social-media li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.quick-links a,
+.social-media a {
+    color: var(--gray-200);
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    transition: all var(--transition-default);
+    position: relative;
+}
+
+.quick-links a:hover,
+.social-media a:hover {
+    color: var(--white);
+    padding-left: var(--spacing-xs);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+    text-align: center;
+    color: var(--gray-300);
+    font-size: var(--font-size-sm);
 }

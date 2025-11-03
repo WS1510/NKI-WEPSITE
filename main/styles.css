@@ -5,9 +5,10 @@
 @import url('./css/base.css');
 
 /* Component CSS Files - 컴포넌트 CSS 파일들 */
+@import url('./css/components.css');
+@import url('./css/navigation.css');
 @import url('./css/buttons.css');
 @import url('./css/cards.css');
-@import url('./css/tabs.css');
 @import url('./css/forms.css');
 @import url('./css/footer.css');
 
@@ -18,8 +19,6 @@
 /* Page Specific CSS - 페이지별 CSS */
 @import url('./css/pages/home.css');
 @import url('./css/pages/company.css');
-@import url('./css/pages/service.css');
-@import url('./css/pages/contact.css');
 
 /* Legacy CSS Override - 기존 CSS 오버라이드 */
 /* 기존 style.css와 sections.css의 중복 스타일을 방지하기 위한 설정 */
@@ -322,10 +321,9 @@ a:hover {
     /* Dark mode variables can be added here when needed */
 }
 
-/* Focus Styles for Accessibility */
+/* Focus Styles for Accessibility - 클릭 시 파란색 테두리 제거 */
 *:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+    outline: none;
 }
 
 button:focus,
@@ -333,6 +331,19 @@ input:focus,
 textarea:focus,
 select:focus,
 a:focus {
+    outline: none;
+}
+
+/* 키보드 접근성을 위해 Tab 키 사용 시에만 outline 표시 */
+*:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }

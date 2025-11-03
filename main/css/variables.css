@@ -13,6 +13,7 @@
     --dark-bg: #1A1A2E;
     --light-bg: #f8f9fa;
     --white: #ffffff;
+    --gray-50: #f9fafb;
     --gray-100: #f8f9fa;
     --gray-200: #e9ecef;
     --gray-300: #dee2e6;
@@ -40,6 +41,21 @@
     --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
     --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+    
+    /* Feature Icon Colors */
+    --icon-green: #22c55e;
+    --icon-blue: #3b82f6;
+    --icon-purple: #8b5cf6;
+    --icon-orange: #f59e0b;
+    
+    /* Contact Card Colors */
+    --contact-card-border: #e1e5e9;
+    --contact-card-hover: #f8f9fa;
+    
+    /* Hero Section */
+    --hero-gradient-start: rgba(22, 78, 99, 0.8);
+    --hero-gradient-end: rgba(75, 85, 99, 0.8);
+    --hero-grid-opacity: 0.1;
     
     /* Border Radius */
     --radius-sm: 4px;

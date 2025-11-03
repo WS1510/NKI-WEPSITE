@@ -9,65 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="home-page">
     <!-- Header -->
     <header class="header scrolled">
         <div class="header-content">
-            <!-- Menu Toggle Button -->
-            <button class="menu-toggle" id="menuToggle">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            
             <!-- Logo (Center) -->
             <div class="logo">
-                <a href="index.html" aria-label="홈으로 이동">
+                <a href="index.html" aria-label="홈으로 이동" title="홈페이지로 이동">
                     <h1>NKI</h1>
                 </a>
             </div>
-            
-            <!-- Navigation Menu -->
-            <nav class="nav" id="navMenu">
-                <div class="nav-header">
-                    <div class="nav-logo">NKI</div>
-                    <div class="nav-subtitle">National Korea Industry</div>
-                </div>
-                <ul class="nav-list">
-                    <li>
-                        <a href="company.html">
-                            <span class="nav-icon"><i class="fas fa-building"></i></span>
-                            회사소개
-                        </a>
-                    </li>
-                    <li>
-                        <a href="service.html">
-                            <span class="nav-icon"><i class="fas fa-cogs"></i></span>
-                            우리의 서비스
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact.html">
-                            <span class="nav-icon"><i class="fas fa-envelope"></i></span>
-                            견적문의
-                        </a>
-                    </li>
-                </ul>
-                <div class="nav-contact">
-                    <div class="nav-contact-title">연락처</div>
-                    <div class="nav-contact-info">
-                        <div>TEL: <a href="tel:041-583-8598">041-583-8598</a></div>
-                        <div>EMAIL: <a href="mailto:njkim2010@nki-1.co.kr">njkim2010@nki-1.co.kr</a></div>
-                    </div>
-                </div>
-            </nav>
         </div>
     </header>
-
-    <!-- Menu Overlay -->
-    <div class="menu-overlay" id="menuOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -78,18 +31,27 @@
                     <p class="hero-description">
                         NKI(엔케이아이)는 반도체 검사기, 코팅 등 자동화 설비 설계제작으로<br>All-In-One 서비스를 제공하고 있습니다
                     </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="window.location.href='contact.html'">견적문의</button>
-                        <button class="btn btn-secondary" onclick="window.location.href='service.html'">우리의 서비스</button>
-                    </div>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-text">더 많은 정보 보기</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
     <!-- Quick Links Section -->
-    <section class="quick-links">
+    <section class="quick-links-section">
         <div class="container">
+            <div class="section-header text-center">
+                <h2>서비스 바로가기</h2>
+                <p>NKI의 주요 서비스와 정보를 빠르게 확인하세요</p>
+            </div>
+            
             <div class="quick-links-grid">
                 <a href="company.html" class="quick-link-card">
                     <div class="quick-link-icon">
@@ -99,7 +61,8 @@
                     <p>NKI의 역사와 비전,<br>조직도와 연혁을 확인하세요</p>
                     <span class="link-arrow">→</span>
                 </a>
-                <a href="service.html" class="quick-link-card">
+                
+                <a href="#services" class="quick-link-card">
                     <div class="quick-link-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
@@ -107,7 +70,8 @@
                     <p>자동화 설비 설계부터<br>사후지원까지 완벽한 솔루션</p>
                     <span class="link-arrow">→</span>
                 </a>
-                <a href="contact.html" class="quick-link-card">
+                
+                <a href="#contact" class="quick-link-card">
                     <div class="quick-link-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
@@ -117,7 +81,9 @@
                 </a>
             </div>
         </div>
-    </section>    <!-- Footer -->
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
@@ -125,13 +91,23 @@
                     <div class="footer-center-inner">
                         <h2 class="footer-company">NKI(엔케이아이)</h2>
                         <div class="footer-company-lines">
-                            <p>COMPANY : NKI(엔케이아이), OWNER : 김 남 진, TEL : 041) 583-8598, FAX : 041) 583-8599, E-mail : njkim2010@nki-1.co.kr, ADDRESS : [31029] 충청남도 천안시 서북구 직산읍 신갈리 125-11, (NKI(엔케이아이))</p>
-                            <p>BUSINESS LICENSE : 490-81-02724, 개인정보관리책임자 : 김남진 (@nki-1.co.kr)</p>
+                            <p>
+                                <strong>COMPANY :</strong> NKI(엔케이아이) | 
+                                <strong>OWNER :</strong> 김남진<br>
+                                <strong>TEL :</strong> 041) 583-8598 | 
+                                <strong>FAX :</strong> 041) 583-8599<br>
+                                <strong>E-mail :</strong> njkim2010@nki-1.co.kr
+                            </p>
+                            <p>
+                                <strong>ADDRESS :</strong> [31029] 충청남도 천안시 서북구 직산읍 신갈리 125-11<br>
+                                <strong>BUSINESS LICENSE :</strong> 490-81-02724 | 
+                                <strong>개인정보관리책임자 :</strong> 김남진 (@nki-1.co.kr)
+                            </p>
                         </div>
-                            <div class="footer-note">
-                                <p>COPYRIGHT (c) COMPANY NATIONAL KOREA INDUSTRY Co.,Ltd , ALL RIGHTS RESERVED</p>
-                                <p class="footer-small">본 사이트에 사용된 모든 이미지와 내용의 무단도용을 금지 합니다 Design by Company NKI</p>
-                            </div>
+                        <div class="footer-note">
+                            <p>COPYRIGHT (c) COMPANY NATIONAL KOREA INDUSTRY Co.,Ltd , ALL RIGHTS RESERVED</p>
+                            <p class="footer-small">본 사이트에 사용된 모든 이미지와 내용의 무단도용을 금지 합니다. Design by Company NKI</p>
+                        </div>
                     </div>
                 </div>
             </div>
