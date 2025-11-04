@@ -1,0 +1,229 @@
+/* =============================================================================
+   NKI Website - Main CSS Entry Point
+   메인 CSS 진입점: 모든 스타일을 체계적으로 관리
+   ============================================================================= */
+
+/* Reset and Base Styles */
+@import url('./reset.css');
+@import url('./variables.css');
+@import url('./base.css');
+
+/* Layout Components */
+@import url('./header.css');
+@import url('./navigation.css');
+@import url('./hero.css');
+@import url('./footer.css');
+
+/* UI Components */
+@import url('./buttons.css');
+@import url('./cards.css');
+@import url('./forms.css');
+@import url('./modal.css');
+
+/* Feature Sections */
+@import url('./sections.css');
+@import url('./features.css');
+@import url('./components.css');
+
+/* Animations and Responsive */
+@import url('./animations.css');
+@import url('./responsive.css');
+
+/* Page Specific Styles */
+@import url('./pages/home.css');
+@import url('./pages/company.css');
+
+/* Legacy Styles (기존 style.css의 내용) */
+/* Global Styles */
+:root {
+    --primary-color: #2166FF;
+    --secondary-color: #28C76F;
+    --accent-color: #8E44FF;
+    --dark-bg: #1A1A2E;
+    --text-color: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --border-color: #e1e1e1;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Common Layout */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid Layouts */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Spacing Utilities */
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+/* Quick Links Section */
+.quick-links-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.quick-link-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.quick-link-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.quick-link-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.quick-link-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.quick-link-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.link-arrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover .link-arrow {
+    transform: translateX(5px);
+}
+
+/* Chat Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: var(--shadow-hover);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-widget:hover {
+    transform: scale(1.05);
+}
+
+.chat-icon {
+    margin-right: 10px;
+}
+
+.chat-text {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .quick-link-card {
+        padding: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .chat-widget {
+        padding: 12px 16px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .chat-text {
+        display: none;
+    }
+}

@@ -1,0 +1,238 @@
+/* Features Section Styles */
+.features {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.features-header {
+    margin-bottom: 4rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 1200px) {
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+    
+    /* 첫 3개 카드는 각각 2칸씩 차지 */
+    .feature-card:nth-child(1),
+    .feature-card:nth-child(2),
+    .feature-card:nth-child(3) {
+        grid-column: span 2;
+    }
+    
+    /* 마지막 2개 카드는 중앙에 배치하고 각각 2칸씩 차지 */
+    .feature-card:nth-child(4) {
+        grid-column: 2 / 4;
+    }
+    
+    .feature-card:nth-child(5) {
+        grid-column: 4 / 6;
+    }
+}
+
+.feature-card {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    opacity: 0.1;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon::before {
+    transform: scale(1.2);
+}
+
+.feature-icon.blue {
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+}
+
+.feature-icon.green {
+    background: linear-gradient(135deg, #7ED321, #5CB811);
+}
+
+.feature-icon.purple {
+    background: linear-gradient(135deg, #BD10E0, #9013C4);
+}
+
+.feature-icon.orange {
+    background: linear-gradient(135deg, #FF9500, #E6850E);
+}
+
+.feature-icon.red {
+    background: linear-gradient(135deg, #FF3B30, #D70015);
+}
+
+.feature-icon.teal {
+    background: linear-gradient(135deg, #5AC8FA, #007AFF);
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-title {
+    color: var(--primary-color);
+}
+
+.feature-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.feature-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Animation for cards */
+.feature-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpCard 0.6s ease-out forwards;
+}
+
+.feature-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.feature-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUpCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features {
+        padding: 3rem 0;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem;
+        border-radius: 12px;
+    }
+
+    .feature-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-description {
+        margin-bottom: 1rem;
+        color: var(--text-light);
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .features-header {
+        margin-bottom: 2rem;
+    }
+}

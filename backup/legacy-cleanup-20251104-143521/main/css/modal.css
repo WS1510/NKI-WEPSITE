@@ -1,0 +1,43 @@
+/* Modal styles and animations for quote success */
+.quote-success-modal.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.0);
+  z-index: 9999;
+  pointer-events: none;
+  transition: background-color 220ms ease, opacity 220ms ease;
+  opacity: 0;
+}
+.quote-success-modal.overlay.modal-open {
+  background: rgba(0,0,0,0.45);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.quote-dialog {
+  background: #fff;
+  color: #222;
+  width: 90%;
+  max-width: 680px;
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  transform: translateY(8px) scale(0.98);
+  opacity: 0;
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1), opacity 280ms ease;
+}
+.quote-dialog.modal-open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.quote-dialog.modal-leave {
+  transform: translateY(6px) scale(0.98);
+  opacity: 0;
+}
+
+.quote-dialog h3 { margin: 0 0 10px 0; color:#0b5394; }
+.quote-dialog p { margin: 0 0 8px 0; color: #333; }
+.quote-dialog button { margin-top: 12px; }

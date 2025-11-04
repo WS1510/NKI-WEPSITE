@@ -1,0 +1,367 @@
+/* Main CSS Management File - 메인 CSS 관리 파일 */
+
+/* Core CSS Files - 핵심 CSS 파일들 */
+@import url('./variables.css');
+@import url('./base.css');
+
+/* Component CSS Files - 컴포넌트 CSS 파일들 */
+@import url('./components.css');
+@import url('./navigation.css');
+@import url('./buttons.css');
+@import url('./cards.css');
+@import url('./forms.css');
+@import url('./footer.css');
+
+/* Animation and Responsive - 애니메이션 및 반응형 */
+@import url('./animations.css');
+@import url('./responsive.css');
+
+/* Page Specific CSS - 페이지별 CSS */
+@import url('./pages/home.css');
+@import url('./pages/company.css');
+
+/* Legacy CSS Override - 기존 CSS 오버라이드 */
+/* 기존 style.css와 sections.css의 중복 스타일을 방지하기 위한 설정 */
+
+/* Reset any conflicting styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Layout */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height-normal);
+    color: var(--text-color);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Main Layout Structure */
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Navigation Override */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: var(--spacing-md) 0;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: var(--spacing-lg);
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+    background: var(--gray-50);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width var(--transition-base);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+/* Mobile Navigation */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: var(--font-size-lg);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow);
+        display: none;
+        gap: var(--spacing-sm);
+    }
+    
+    .navbar-nav.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: var(--spacing-md);
+        border-radius: var(--radius);
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+}
+
+/* Section Padding Override */
+.section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.section-container,
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    width: 100%;
+}
+
+/* Typography Override */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    font-weight: var(--font-bold);
+    line-height: var(--line-height-tight);
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+}
+
+h1, .h1 { font-size: var(--font-size-3xl); }
+h2, .h2 { font-size: var(--font-size-2xl); }
+h3, .h3 { font-size: var(--font-size-xl); }
+h4, .h4 { font-size: var(--font-size-lg); }
+h5, .h5 { font-size: var(--font-size-base); }
+h6, .h6 { font-size: var(--font-size-sm); }
+
+p {
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-muted);
+}
+
+/* Link Styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 0; }
+.mr-0 { margin-right: 0; }
+
+.pt-0 { padding-top: 0; }
+.pb-0 { padding-bottom: 0; }
+.pl-0 { padding-left: 0; }
+.pr-0 { padding-right: 0; }
+
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+.position-sticky { position: sticky; }
+
+/* Background Utilities */
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+.bg-white { background-color: var(--white); }
+.bg-gray-50 { background-color: var(--gray-50); }
+.bg-gray-100 { background-color: var(--gray-100); }
+
+/* Text Color Utilities */
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-muted { color: var(--text-muted); }
+.text-white { color: var(--white); }
+
+/* Border Utilities */
+.border { border: 1px solid var(--border-color); }
+.border-top { border-top: 1px solid var(--border-color); }
+.border-bottom { border-bottom: 1px solid var(--border-color); }
+.border-left { border-left: 1px solid var(--border-color); }
+.border-right { border-right: 1px solid var(--border-color); }
+
+.border-radius { border-radius: var(--radius); }
+.border-radius-lg { border-radius: var(--radius-lg); }
+
+/* Shadow Utilities */
+.shadow { box-shadow: var(--shadow); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-only {
+        display: block !important;
+    }
+    
+    * {
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    .navbar,
+    .footer,
+    .btn {
+        display: none !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --text-color: #000;
+        --text-muted: #333;
+        --border-color: #000;
+        --primary-color: #0000ff;
+        --secondary-color: #800080;
+    }
+}
+
+/* Dark Mode Support (for future implementation) */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode variables can be added here when needed */
+}
+
+/* Focus Styles for Accessibility - 클릭 시 파란색 테두리 제거 */
+*:focus {
+    outline: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+    outline: none;
+}
+
+/* 키보드 접근성을 위해 Tab 키 사용 시에만 outline 표시 */
+*:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition: top 0.3s;
+    z-index: 9999;
+}
+
+.skip-to-content:focus {
+    top: 6px;
+}

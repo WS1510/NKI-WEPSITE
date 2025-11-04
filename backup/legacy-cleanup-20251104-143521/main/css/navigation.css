@@ -1,0 +1,131 @@
+/* Simple Navigation Styles - Logo Only */
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all var(--transition-base);
+    height: 80px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* Logo Styles */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: calc(var(--font-size-2xl) * 2);
+    font-weight: var(--font-bold);
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: calc(var(--font-size-2xl) * 2);
+    font-weight: var(--font-bold);
+    letter-spacing: 2px;
+    transition: all var(--transition-base);
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+    color: var(--secondary-color);
+    background: rgba(11, 83, 148, 0.05);
+    box-shadow: 0 2px 8px rgba(11, 83, 148, 0.1);
+}
+
+.logo a:active {
+    transform: scale(0.98);
+}
+
+/* Focus 제거 */
+.logo a:focus {
+    outline: none;
+}
+
+.logo:focus {
+    outline: none;
+}
+
+/* Responsive Typography */
+@media (max-width: 1024px) {
+    .logo a {
+        font-size: calc(var(--font-size-xl) * 1.8);
+    }
+    
+    .logo h1 {
+        font-size: calc(var(--font-size-xl) * 1.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo a {
+        font-size: calc(var(--font-size-xl) * 1.5);
+    }
+    
+    .logo h1 {
+        font-size: calc(var(--font-size-xl) * 1.5);
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: var(--spacing-sm) 0;
+        height: 70px;
+    }
+    
+    .header-content {
+        height: 70px;
+    }
+    
+    .logo {
+        transform: translateX(-50%) scale(0.9);
+    }
+    
+    .logo h1 {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        height: 65px;
+    }
+    
+    .header-content {
+        height: 65px;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .logo h1 {
+        font-size: 2.4rem;
+    }
+}
