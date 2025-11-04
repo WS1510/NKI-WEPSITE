@@ -1,0 +1,403 @@
+/* =========================================================================
+   FULL-PAGE SCROLL SNAP - PROFESSIONAL IMPLEMENTATION
+   전문적인 풀페이지 스크롤 스냅 구현
+   
+   Based on:
+   - MDN CSS Scroll Snap Documentation
+   - Web.dev Best Practices
+   - CSS Scroll Snap Module Level 1 Specification
+   ========================================================================= */
+
+/* =========================================================================
+   1. RESET & BASE SETUP
+   ========================================================================= */
+
+/* Ensure proper box-sizing for all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* HTML element setup - the scroll container */
+html {
+    /* Enable smooth scrolling behavior */
+    scroll-behavior: smooth;
+    
+    /* Main scroll snap configuration - proximity for natural scrolling */
+    scroll-snap-type: y proximity;
+    
+    /* Remove default margins/padding */
+    margin: 0;
+    padding: 0;
+    
+    /* Ensure full height */
+    height: 100%;
+    
+    /* Enable scrolling */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    /* Account for fixed header with scroll padding */
+    scroll-padding-top: 80px;
+}
+
+/* Body element setup */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+    /* Remove any default scrolling from body */
+    overflow: visible;
+    
+    /* Ensure proper font and layout */
+    font-family: var(--font-family-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+    line-height: 1.6;
+}
+
+/* =========================================================================
+   2. SCROLL SNAP SECTIONS
+   ========================================================================= */
+
+/* Header - Fixed positioning with proper z-index */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    min-height: 70px;
+    z-index: 1000;
+    
+    /* Exclude from scroll snap */
+    scroll-snap-align: none;
+    
+    /* Styling */
+    background-color: var(--bg-primary, #ffffff);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    /* Ensure content is properly contained */
+    padding: var(--spacing-sm, 0.75rem) 0;
+}
+
+/* Hero Section - First snap point */
+.hero {
+    /* Full viewport height */
+    height: 100vh;
+    min-height: 100vh;
+    
+    /* Scroll snap configuration */
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    /* Ensure content is not hidden behind header */
+    padding-top: 80px;
+    
+    /* Prevent overflow issues */
+    overflow: hidden;
+}
+
+/* Business Field Section - Second snap point */
+.business-field-section {
+    /* Full viewport height */
+    height: 100vh;
+    min-height: 100vh;
+    
+    /* Scroll snap configuration */
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    
+    /* Layout */
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    /* Styling */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    
+    /* Content padding */
+    padding: var(--spacing-3xl, 4rem) 0;
+}
+
+/* Quick Links Section - Third snap point */
+.quick-links-section {
+    /* Full viewport height */
+    height: 100vh;
+    min-height: 100vh;
+    
+    /* Scroll snap configuration */
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    
+    /* Layout */
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    /* Styling */
+    background-color: var(--bg-secondary, #f8f9fa);
+    
+    /* Content padding */
+    padding: var(--spacing-3xl, 4rem) 0;
+}
+
+/* Footer - Natural scrolling without snap */
+.footer {
+    /* Natural height - not forced to full viewport */
+    height: auto;
+    min-height: auto;
+    
+    /* Exclude from snap system */
+    scroll-snap-align: none;
+    
+    /* Styling */
+    background-color: var(--bg-dark, #1A1A2E);
+    color: var(--text-light, #cccccc);
+    
+    /* Content padding */
+    padding: var(--spacing-xl, 2rem) 0;
+    
+    /* Ensure footer is accessible by adding bottom margin */
+    margin-bottom: 2rem;
+}
+
+/* =========================================================================
+   3. CONTENT POSITIONING & LAYOUT
+   ========================================================================= */
+
+/* Container for centering content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg, 1.5rem);
+    width: 100%;
+}
+
+/* Section headers */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl, 3rem);
+}
+
+/* Ensure content doesn't overflow snap containers */
+.hero-content,
+.business-field-content,
+.quick-links-grid {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* =========================================================================
+   4. RESPONSIVE DESIGN
+   ========================================================================= */
+
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
+    html {
+        /* Adjust scroll padding for smaller screens */
+        scroll-padding-top: 90px;
+    }
+    
+    .header {
+        min-height: 80px;
+        padding: var(--spacing-md, 1rem) 0;
+    }
+    
+    .hero {
+        padding-top: 90px;
+    }
+    
+    /* Ensure snap sections are accessible on mobile */
+    .business-field-section,
+    .quick-links-section {
+        min-height: 100vh;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+    html {
+        /* Keep proximity for natural scrolling on small screens */
+        scroll-snap-type: y proximity;
+        scroll-padding-top: 80px;
+    }
+    
+    .header {
+        min-height: 70px;
+        padding: var(--spacing-sm, 0.75rem) 0;
+    }
+    
+    .hero {
+        padding-top: 80px;
+    }
+}
+
+/* =========================================================================
+   5. ACCESSIBILITY & PERFORMANCE
+   ========================================================================= */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    /* Disable snap on devices where user prefers reduced motion */
+    * {
+        scroll-snap-type: none !important;
+        scroll-snap-align: none !important;
+    }
+}
+
+/* Print styles - disable scroll snap */
+@media print {
+    html {
+        scroll-snap-type: none;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .hero,
+    .business-field-section,
+    .quick-links-section {
+        height: auto;
+        min-height: auto;
+        scroll-snap-align: none;
+        page-break-inside: avoid;
+    }
+}
+
+/* =========================================================================
+   6. BROWSER COMPATIBILITY & FALLBACKS
+   ========================================================================= */
+
+/* Feature detection support */
+@supports not (scroll-snap-type: y mandatory) {
+    /* Fallback for browsers without scroll snap support */
+    html {
+        scroll-snap-type: none;
+    }
+    
+    .hero,
+    .business-field-section,
+    .quick-links-section {
+        scroll-snap-align: none;
+        scroll-snap-stop: normal;
+    }
+}
+
+/* Legacy browser support */
+html {
+    /* Standard property */
+    scroll-snap-type: y proximity;
+    /* Webkit prefix for older Safari versions */
+    -webkit-scroll-snap-type: y proximity;
+    -webkit-scroll-snap-points-y: repeat(100vh);
+}
+
+.hero,
+.business-field-section,
+.quick-links-section {
+    /* Standard property */
+    scroll-snap-align: start;
+    /* Webkit prefix for older Safari versions */
+    -webkit-scroll-snap-align: start;
+}
+
+/* =========================================================================
+   7. ACCESSIBILITY & SKIP NAVIGATION
+   ========================================================================= */
+
+/* Skip navigation links */
+.skip-navigation {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    right: 0;
+    z-index: 10001;
+    background: var(--bg-dark, #1A1A2E);
+    padding: 1rem;
+    text-align: center;
+}
+
+.skip-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skip-navigation li {
+    margin: 0;
+}
+
+.skip-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color, #2166FF);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.skip-link:hover,
+.skip-link:focus {
+    background: var(--primary-dark, #1a52cc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Show skip navigation when focused */
+.skip-navigation:focus-within {
+    top: 0;
+}
+
+/* Focus management */
+.skip-link:focus {
+    outline: 3px solid var(--accent-color, #8E44FF);
+    outline-offset: 2px;
+}
+
+/* =========================================================================
+   8. DEBUGGING & DEVELOPMENT
+   ========================================================================= */
+
+/* Development mode indicators (remove in production) */
+.scroll-snap-debug {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 10000;
+    display: none; /* Enable for debugging */
+}
+
+/* Visual indicators for snap points (development only) */
+.hero::before,
+.business-field-section::before,
+.quick-links-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: rgba(33, 102, 255, 0.5);
+    z-index: 1;
+    display: none; /* Enable for debugging */
+}

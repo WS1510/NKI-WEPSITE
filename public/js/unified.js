@@ -520,6 +520,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.sendNkiQuote = NKI.quote.sendQuote.bind(NKI.quote);
 });
 
+
+
 // 성능 모니터링 (개발 모드)
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     window.addEventListener('load', () => {

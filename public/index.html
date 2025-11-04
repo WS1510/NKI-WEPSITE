@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NKI - National Korea Industry</title>
+    <title>NKI - National Korea Incorporated</title>
     <!-- Unified CSS - 모든 스타일을 통합한 단일 CSS 파일 -->
     <link rel="stylesheet" href="css/unified.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -13,12 +13,22 @@
     <!-- Header -->
     <header class="header scrolled">
         <div class="header-content">
+            <!-- Left Space (for balance) -->
+            <div class="nav-spacer"></div>
+            
             <!-- Logo (Center) -->
             <div class="logo">
                 <a href="index.html" aria-label="홈으로 이동" title="홈페이지로 이동">
                     <img src="images/nki-logo.png" alt="NKI 로고" class="logo-image">
                 </a>
             </div>
+            
+            <!-- Navigation Menu (Right) -->
+            <nav class="nav-menu">
+                <a href="#business-field" class="nav-link">회사소개</a>
+                <a href="#quick-links" class="nav-link">서비스</a>
+                <a href="#contact" class="nav-link">문의하기</a>
+            </nav>
         </div>
     </header>
 
@@ -98,7 +108,7 @@
     </section>
 
     <!-- Quick Links Section -->
-    <section class="quick-links-section">
+    <section class="quick-links-section" id="quick-links">
         <div class="container">
             <div class="section-header text-center">
                 <h2>서비스 바로가기</h2>
@@ -137,7 +147,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-row">
                 <div class="footer-center">
