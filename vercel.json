@@ -1,4 +1,7 @@
 {
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "installCommand": null,
   "functions": {
     "api/**/*.js": {
       "runtime": "nodejs18.x",
